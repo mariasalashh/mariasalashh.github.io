@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arancha Sala | Cybersecurity Analyst</title>
+  <meta name="description" content="Arancha Sala — Cybersecurity Analyst (Blue Team / SOC / Incident Response). Interactive CV & portfolio." />
+  <style>
+    :root{
+      --bg:#0b1020;
+      --panel:#0f1733;
+      --panel2:#0c142d;
+      --text:#e9ecf5;
+      --muted:#b8c0dd;
+      --line:rgba(255,255,255,.10);
+      --accent:#8aa4ff;
+      --accent2:#4fd1c5;
+      --shadow: 0 10px 35px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 10% 5%, rgba(138,164,255,.20), transparent 60%),
+        radial-gradient(800px 450px at 85% 20%, rgba(79,209,197,.14), transparent 55%),
+        radial-gradient(900px 500px at 50% 105%, rgba(138,164,255,.12), transparent 60%),
+        var(--bg);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 70px}
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,16,32,.65);
+      border-bottom:1px solid var(--line);
+    }
+    .nav .inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+    }
+    .brand{display:flex; gap:12px; align-items:center; min-width:240px}
+    .avatar{
+      width:38px;height:38px;border-radius:12px;
+      background: linear-gradient(135deg, rgba(138,164,255,.95), rgba(79,209,197,.75));
+      box-shadow: var(--shadow);
+    }
+    .brand b{display:block; font-size:14px; letter-spacing:.2px}
+    .brand span{display:block; font-size:12px; color:var(--muted)}
+    .links{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    .pill{
+      font-size:13px;
+      padding:8px 11px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background: rgba(255,255,255,.04);
+      text-decoration:none;
+      transition:.15s ease;
+    }
+    .pill:hover{transform: translateY(-1px); border-color: rgba(138,164,255,.45)}
+    .btn{
+      border:none;
+      padding:10px 14px;
+      border-radius:12px;
+      background: linear-gradient(135deg, rgba(138,164,255,.95), rgba(138,164,255,.65));
+      color:#071022;
+      font-weight:700;
+      cursor:pointer;
+      box-shadow: var(--shadow);
+      transition:.15s ease;
+      text-decoration:none;
+      display:inline-flex; align-items:center; gap:10px;
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .ghost{
+      background: rgba(255,255,255,.05);
+      color:var(--text);
+      border:1px solid var(--line);
+      box-shadow:none;
+      font-weight:650;
+    }
+    .hero{
+      margin-top:22px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .brand{min-width:auto}
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero .left{padding:26px}
+    h1{
+      margin:0 0 10px 0;
+      font-size:48px;
+      line-height:1.05;
+      letter-spacing:-.8px;
+    }
+    @media (max-width: 520px){ h1{font-size:38px} }
+    .tagline{
+      color:var(--muted);
+      font-size:16px;
+      margin:0 0 18px 0;
+      max-width:62ch;
+    }
+    .chips{display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 0}
+    .chip{
+      font-family:var(--mono);
+      font-size:12px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color:#dbe1ff;
+    }
+    .actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+    .right{padding:18px}
+    .mini{
+      padding:16px;
+      border-radius:14px;
+      background: rgba(0,0,0,.16);
+      border:1px solid var(--line);
+      margin-bottom:12px;
+    }
+    .mini h3{margin:0 0 8px 0; font-size:14px; color:#dfe6ff}
+    .mini p{margin:0; font-size:13px; color:var(--muted)}
+    .kpi{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+    .kpi .box{
+      padding:14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.035);
+    }
+    .kpi b{display:block; font-size:12px; color:var(--muted); font-weight:650}
+    .kpi span{display:block; font-size:14px; margin-top:6px}
+    section{margin-top:22px}
+    .grid{display:grid; grid-template-columns: 1fr 1fr; gap:18px}
+    @media (max-width: 900px){ .grid{grid-template-columns:1fr} }
+    .section{
+      padding:22px;
+    }
+    .section h2{
+      margin:0 0 12px;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    .muted{color:var(--muted)}
+    .list{margin:10px 0 0; padding:0; list-style:none}
+    .list li{
+      padding:10px 0;
+      border-top:1px solid var(--line);
+    }
+    .list li:first-child{border-top:none; padding-top:0}
+    .row{
+      display:flex; justify-content:space-between; gap:12px; align-items:flex-start;
+    }
+    .row b{font-size:14px}
+    .row .meta{font-size:12px; color:var(--muted); white-space:nowrap}
+    details{
+      border:1px solid var(--line);
+      border-radius:14px;
+      background: rgba(255,255,255,.03);
+      padding:12px 14px;
+      margin:10px 0;
+    }
+    summary{
+      cursor:pointer;
+      font-weight:700;
+      list-style:none;
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+    }
+    summary::-webkit-details-marker{display:none}
+    .bullet{margin:10px 0 0 16px; color:var(--muted)}
+    .bullet li{margin:6px 0}
+    .footer{
+      margin-top:22px;
+      padding:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+    }
+    .toast{
+      position:fixed; left:50%; bottom:18px; transform:translateX(-50%);
+      background: rgba(15,23,51,.92);
+      border:1px solid var(--line);
+      padding:10px 12px;
+      border-radius:12px;
+      box-shadow: var(--shadow);
+      color:var(--text);
+      font-size:13px;
+      opacity:0;
+      pointer-events:none;
+      transition:.2s ease;
+    }
+    .toast.show{opacity:1}
+  </style>
+</head>
+<body>
+
+  <div class="nav">
+    <div class="inner">
+      <div class="brand">
+        <div class="avatar" aria-hidden="true"></div>
+        <div>
+          <b>Arancha Sala</b>
+          <span>Cybersecurity Analyst · Blue Team · SOC</span>
+        </div>
+      </div>
+
+      <div class="links">
+        <a class="pill" href="#about">About</a>
+        <a class="pill" href="#experience">Professional Experience</a>
+        <a class="pill" href="#education">Education</a>
+        <a class="pill" href="#skills">Skills</a>
+        <a class="pill" href="#certs">Certifications</a>
+        <a class="pill" href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <div class="hero">
+      <div class="card left">
+        <h1>Cybersecurity Analyst</h1>
+        <p class="tagline">
+          SOC Operations · Incident Response · Threat Analysis · Defensive Security
+          Background in Criminology combined with a Master’s Degree in Cybersecurity, bringing investigative rigor, structured analysis, and evidence-driven decision making to security operations and incident response.
+        </p>
+
+        <div class="chips">
+          <span class="chip">Incident Triage</span>
+          <span class="chip">IR Playbooks</span>
+          <span class="chip">Risk Prioritisation</span>
+          <span class="chip">Security Reporting</span>
+          <span class="chip">Network Security</span>
+          <span class="chip">IoT Segmentation (TFM)</span>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="#contact">Contact me</a>
+          <a class="btn ghost" href="resume.pdf" target="_blank" rel="noopener">Download resume (PDF)</a>
+          <button class="btn ghost" id="copyEmailBtn" type="button">Copy email</button>
+        </div>
+      </div>
+
+      <div class="card right">
+        <div class="mini">
+          <h3>Current focus</h3>
+          <p>SOC workflows, incident analysis, threat assessment, and clear remediation guidance for technical/non-technical stakeholders.</p>
+        </div>
+        <div class="kpi">
+          <div class="box">
+            <b>Location</b>
+            <span>Perth, WA (Australia)</span>
+          </div>
+          <div class="box">
+            <b>Languages</b>
+            <span>Spanish · English (C1) · Portuguese (C2)</span>
+          </div>
+          <div class="box">
+            <b>Education</b>
+            <span>MSc Cybersecurity (UNIR)</span>
+          </div>
+          <div class="box">
+            <b>Track</b>
+            <span>Blue Team / SOC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="about" class="section">
+  <h2>About</h2>
+  <p>
+    I am a cybersecurity professional specialised in defensive security, with a strong focus on SOC operations and incident response. I combine a Master’s Degree in Cybersecurity with a background in Criminology, which strengthens my investigative mindset, structured analysis, and evidence handling during security incidents.
+  </p>
+
+  <p>
+    I have experience working in high-responsibility environments where confidentiality, accuracy, and clear documentation are critical. I am particularly interested in Blue Team roles involving alert triage, incident investigation, threat assessment, and producing actionable reports for decision-makers.
+  </p>
+
+  <p>
+    My Master’s thesis focused on the design and implementation of a segmented home automation infrastructure, applying network segmentation, security controls, and defensive architecture principles.
+  </p>
+</section>
+
+    <section class="grid">
+      <div id="experience" class="card section">
+        <h2>Professional Experience</h2>
+
+        <details open>
+          <summary>
+            Cybersecurity Consultant — Law Enforcement, Spain
+            <span class="meta">2009 – 2025</span>
+          </summary>
+          <ul class="bullet">
+            <li>Reviewed vulnerability scan outputs and prioritised findings using business impact and CVSS.</li>
+            <li>Produced step-by-step remediation plans and concise security guidance for operational teams.</li>
+            <li>Designed tabletop exercises and scenario simulations to validate incident response procedures.</li>
+            <li>Supported evidence collection and chain-of-custody practices with internal/external stakeholders.</li>
+            <li>Contributed to compliance evidence packs and internal audit checklists aligned to baseline controls.</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>
+            Security Analyst — Police Headquarters (Madrid), Spain
+            <span class="meta">2020 – 2025</span>
+          </summary>
+          <ul class="bullet">
+            <li>Produced intelligence-style reports supporting operational decision-making and risk assessment.</li>
+            <li>Applied structured interviewing and information validation to ensure reliability and evidentiary quality.</li>
+            <li>Maintained secure, auditable records and communicated sensitive findings to non-technical leaders.</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>
+            Document Fraud Analyst — Border Control (Madrid-Barajas Airport), Spain
+            <span class="meta">2018 – 2020</span>
+          </summary>
+          <ul class="bullet">
+            <li>Detected forgery and identity anomalies through systematic inspection and database corroboration.</li>
+            <li>Maintained strict chain-of-custody and produced audit-quality reports for escalations.</li>
+            <li>Delivered training to frontline staff and contributed to intelligence on emerging fraud trends.</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>
+            Network Analyst — Law Enforcement, Spain
+            <span class="meta">2014 – 2016</span>
+          </summary>
+          <ul class="bullet">
+            <li>Supported routers, switches and firewalls; analysed logs/performance metrics to detect anomalies.</li>
+            <li>Implemented segmentation, access controls, patching/firmware updates and secure remote access (VPN).</li>
+            <li>Maintained documentation, runbooks and simple incident playbooks; trained staff in secure practices.</li>
+          </ul>
+        </details>
+      </div>
+
+      <div class="card section">
+        <h2 id="education">Education</h2>
+        <ul class="list">
+          <li>
+            <div class="row">
+              <b>Diploma of AI (in progress) — Greystone College, Perth</b>
+              <span class="meta">2025 – 2026</span>
+            </div>
+            <div class="muted">Machine learning, data analysis and applied AI for anomaly detection, automation and predictive analytics.</div>
+          </li>
+          <li>
+            <div class="row">
+              <b>Master’s Degree in Cybersecurity — UNIR (Spain)</b>
+              <span class="meta">2025</span>
+            </div>
+            <div class="muted">Ethical hacking, forensics, incident response, security architecture. Final project: segmented smart-home infrastructure (IoT security).</div>
+          </li>
+          <li>
+            <div class="row">
+              <b>BSc in Criminology — UEMC (Spain)</b>
+              <span class="meta">2019 – 2024</span>
+            </div>
+            <div class="muted">Cybercrime, digital evidence handling and investigative techniques. Final grade: 9/10.</div>
+          </li>
+          <li>
+            <div class="row">
+              <b>Diploma of IT — European University (Spain)</b>
+              <span class="meta">2018</span>
+            </div>
+            <div class="muted">IT infrastructure, network essentials and system administration foundations.</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div id="skills" class="card section">
+        <h2>Skills</h2>
+        <ul class="list">
+          <li><b>SOC & Incident Response</b><div class="muted">Triage, investigation structure, reporting, remediation guidance, tabletop exercises.</div></li>
+          <li><b>Network Security</b><div class="muted">Segmentation, access controls, VPN, logging, anomaly detection, hardening basics.</div></li>
+          <li><b>Risk & Communication</b><div class="muted">Prioritisation by impact, clear stakeholder communication, audit-quality documentation.</div></li>
+          <li><b>Investigations & Evidence</b><div class="muted">Chain-of-custody mindset, information validation, confidentiality in high-stakes contexts.</div></li>
+        </ul>
+      </div>
+
+      <div id="certs" class="card section">
+        <h2>Certifications</h2>
+        <ul class="list">
+          <li><b>Microsoft Azure AZ-900</b><div class="muted">2025</div></li>
+          <li><b>Google Cybersecurity</b><div class="muted">2025</div></li>
+          <li><b>Cybersecurity Specialisation Course — National Police (Spain)</b><div class="muted">2018</div></li>
+          <li><b>Diploma of Cybercrime — National Police (Spain)</b><div class="muted">2018</div></li>
+          <li><b>WA Driver’s License — Car & Motorcycle</b><div class="muted">Active</div></li>
+        </ul>
+
+        <h2 style="margin-top:16px">Languages</h2>
+        <ul class="list">
+          <li><b>Spanish</b><div class="muted">Native</div></li>
+          <li><b>English</b><div class="muted">C1</div></li>
+          <li><b>Portuguese</b><div class="muted">C2</div></li>
+          <li><b>French / German</b><div class="muted">A1</div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="card section">
+      <h2>Get in touch</h2>
+      <p class="muted" style="margin-top:0">
+        Email: <span style="font-family:var(--mono); color:#dbe1ff">mariasalashh@gmail.com</span> · Phone: <span style="font-family:var(--mono); color:#dbe1ff">+61 493 583 554</span>
+      </p>
+      <div class="actions">
+        <a class="btn" href="mailto:mariasalashh@gmail.com?subject=Cybersecurity%20opportunity%20-%20Arancha%20Sala">Email me</a>
+        <button class="btn ghost" id="copyEmailBtn2" type="button">Copy email</button>
+      </div>
+      <p class="muted" style="margin-top:12px">
+        Tip: later we can add LinkedIn and a “Projects” section with 2–3 case studies (SOC incident, phishing triage, network segmentation / IoT).
+      </p>
+    </section>
+
+    <div class="footer">
+      © <span id="year"></span> Arancha Sala · Built as a lightweight interactive CV (no trackers).
+    </div>
+  </main>
+
+  <div class="toast" id="toast">Copied!</div>
+
+  <script>
+    const email = "mariasalashh@gmail.com";
+    const toast = document.getElementById("toast");
+
+    function showToast(msg){
+      toast.textContent = msg || "Copied!";
+      toast.classList.add("show");
+      setTimeout(()=>toast.classList.remove("show"), 1400);
+    }
+
+    async function copyEmail(){
+      try{
+        await navigator.clipboard.writeText(email);
+        showToast("Email copied to clipboard");
+      }catch(e){
+        // fallback
+        const t = document.createElement("textarea");
+        t.value = email;
+        document.body.appendChild(t);
+        t.select();
+        document.execCommand("copy");
+        t.remove();
+        showToast("Email copied");
+      }
+    }
+
+    document.getElementById("copyEmailBtn")?.addEventListener("click", copyEmail);
+    document.getElementById("copyEmailBtn2")?.addEventListener("click", copyEmail);
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
