@@ -1,35 +1,68 @@
-👋 Hi, I'm Maria Sala
-🛡️ Cybersecurity Analyst | Blue Team | SOC Operations
-I am a cybersecurity professional with a strong focus on defensive security, incident response, and threat analysis.
-I hold a Master’s Degree in Cybersecurity and have a background in Criminology, which allows me to approach security incidents with both technical and investigative depth.
+# Maria Sala
 
-My profile is oriented toward SOC environments, where accuracy, methodology, and attention to detail are critical.
+🌐 **Personal Website & Professional Portfolio**  
+🛡️ Cybersecurity Analyst · Blue Team · SOC Operations
 
-🔍 Areas of Focus
-Security Operations Center (SOC)
-Incident Detection & Response
-Threat Analysis & Investigation
-Defensive Security & Monitoring
-Log Analysis & Security Events
-Network and System Security Fundamentals
-🧠 Technical Skills
-SIEM & Log Analysis
-Incident Handling Procedures
-Network Traffic Analysis
-Threat Intelligence Basics
-Linux & Windows Security Fundamentals
-Security Monitoring & Alert Triage
-📂 Projects (in progress)
-This GitHub profile is being actively developed to showcase:
+This repository hosts my personal website, built with GitHub Pages, where I present my professional profile, background, and selected work in cybersecurity.
 
-Hands-on cybersecurity projects
-SOC-style incident analysis labs
-Defensive security exercises
-Technical documentation and reports
-🚧 Projects will be published progressively as part of my professional portfolio.
+The website serves as a central point for my CV, professional information, and future portfolio projects.
 
-🎯 Professional Goal
-To continue developing as a Cybersecurity Analyst within Blue Team / SOC roles, contributing to the detection, analysis, and mitigation of security threats in real-world environments.
+---
 
-📫 Let’s connect
-You can find more about my professional background on my CV and future portfolio projects hosted here on GitHub.
+## About Me
+
+I am a cybersecurity professional with a strong focus on **defensive security**, **incident response**, and **security operations (SOC)**.
+
+I hold a **Master’s Degree in Cybersecurity** and have an academic background in **Criminology**, which allows me to approach security incidents with both technical rigor and investigative depth. My experience combines structured analysis, operational discipline, and clear technical reporting.
+
+My profile is oriented toward SOC environments, where accuracy, methodology, and attention to detail are essential.
+
+---
+
+## Areas of Focus
+
+- Security Operations Center (SOC)
+- Incident Detection, Analysis, and Response
+- Threat Analysis & Investigation
+- Defensive Security & Monitoring
+- Log Analysis & Security Events
+- Network and System Security Fundamentals
+
+---
+
+## Technical Skills
+
+- SIEM & Log Analysis  
+- Incident Handling & Response Procedures  
+- Network Traffic Analysis  
+- Threat Intelligence Fundamentals  
+- Linux & Windows Security Fundamentals  
+- Security Monitoring & Alert Triage  
+
+---
+
+## Website Content
+
+The website includes:
+
+- Professional profile and background  
+- Downloadable CV  
+- Education and certifications  
+- Selected projects and case studies (published progressively)  
+
+🚧 Portfolio projects will be added over time as part of my professional development.
+
+---
+
+## Professional Objective
+
+To continue developing as a **Cybersecurity Analyst** within **Blue Team / SOC** environments, contributing to the detection, analysis, and mitigation of security threats in real-world operational contexts.
+
+---
+
+## Contact
+
+For professional enquiries, please get in touch via the contact information provided on the website.
+
+🔗 **Website:** https://mariasalashh.github.io/
+
