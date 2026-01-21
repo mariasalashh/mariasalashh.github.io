@@ -183,6 +183,14 @@
       color: rgba(12,14,18,.92);
     }
     .btn.contact:hover{ border-color: rgba(34,197,94,.85); }
+    .btn.cv{
+      border-color: rgba(34,197,94,.40);
+      background: linear-gradient(180deg, rgba(34,197,94,.22), rgba(34,197,94,.08));
+    }
+    .btn.cv:hover{
+      border-color: rgba(34,197,94,.70);
+      background: linear-gradient(180deg, rgba(34,197,94,.30), rgba(34,197,94,.10));
+    }
 
     /* HERO */
     .hero{ padding: 26px 0 10px; }
@@ -287,6 +295,40 @@
     .kv span{ color: var(--muted); font-size: 13px; }
     .kv b{ font-weight: 650; font-size: 13px; }
 
+    .divider{
+      width: min(720px, 90%);
+      height: 1px;
+      margin: 10px auto 24px;
+      border: 0;
+      background: linear-gradient(90deg, transparent, rgba(125,211,252,.45), rgba(167,139,250,.45), transparent);
+    }
+
+    .snake{
+      display:grid;
+      gap: 12px;
+      justify-items:center;
+    }
+    .snake-top{
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .snake-canvas{
+      width: min(100%, 360px);
+      height: auto;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      box-shadow: var(--shadow);
+      display:block;
+    }
+    [data-theme="light"] .snake-canvas{
+      background: rgba(0,0,0,.06);
+    }
+
     footer{
       padding: 30px 0 44px;
       margin-top: 8px;
@@ -367,7 +409,7 @@
         <div class="cta">
           <a class="btn" href="https://www.linkedin.com/in/maria-sala-a3947931b/" id="linkedinLink" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn" href="https://github.com/mariasalashh" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="#" id="cvLink" download data-i18n="btn_cv">Download CV</a>
+          <a class="btn contact cv" href="#" id="cvLink" download data-i18n="btn_cv">Download CV</a>
         </div>
       </div>
 
@@ -381,7 +423,7 @@
           <div class="kv"><span data-i18n="kv_location">Ubicación</span><b data-i18n="kv_location_val">Perth, WA</b></div>
           <div class="kv"><span data-i18n="kv_focus">Enfoque</span><b data-i18n="kv_focus_val">SOC · Incident Response</b></div>
           <div class="kv"><span data-i18n="kv_email">Email</span><b class="mono">mariasalashh@gmail.com</b></div>
-          <div class="kv"><span data-i18n="kv_phone">Teléfono</span><b class="mono">+61 04 93 584 554</b></div>
+          <div class="kv"><span data-i18n="kv_phone">Teléfono</span><b class="mono">+61 04 93 583 554</b></div>
           <div class="kv"><span data-i18n="kv_langs">Idiomas</span><b data-i18n="kv_langs_val">ES (Native) · EN (C1) · PT (C2)</b></div>
         </div>
 
@@ -603,7 +645,7 @@
           <div class="item">
             <h3 style="margin:0;font-size:14px;" data-i18n="contact_details_title">Details</h3>
             <p class="muted" style="margin:10px 0 0;"><span class="mono">mariasalashh@gmail.com</span></p>
-            <p class="muted" style="margin:8px 0 0;"><span class="mono">+61 04 93 584 554</span></p>
+            <p class="muted" style="margin:8px 0 0;"><span class="mono">+61 04 93 583 554</span></p>
             <p class="muted" style="margin:8px 0 0;" data-i18n="contact_location">Perth, Western Australia</p>
           </div>
         </div>
@@ -619,6 +661,40 @@
       <span class="mono">mariasalashh.github.io</span>
     </div>
   </footer>
+
+  <hr class="divider" aria-hidden="true" />
+  <!-- GAME -->
+  <section id="juego">
+    <div class="container">
+      <div class="card pad">
+        <div class="section-title">
+          <h2 data-i18n="game_title">Snake clásico</h2>
+          <span class="hint" data-i18n="game_hint">Come y crece</span>
+        </div>
+        <p class="faint" style="margin:0 0 8px;" data-i18n="game_subtitle">Easter egg</p>
+
+        <div class="snake">
+          <p class="muted" style="margin:0; line-height:1.6; text-align:center;" data-i18n="game_desc">
+            Muévete, recoge la comida y evita chocar con el borde o contigo.
+          </p>
+
+          <div class="snake-top">
+            <div class="mono" id="snakeScore" data-i18n="game_score">Puntos: 0</div>
+            <div class="actions">
+              <button class="btn" id="snakeStart" type="button" data-i18n="game_start">Iniciar</button>
+              <button class="btn" id="snakePause" type="button" data-i18n="game_pause">Pausa</button>
+              <button class="btn" id="snakeReset" type="button" data-i18n="game_reset">Reiniciar</button>
+            </div>
+          </div>
+
+          <canvas class="snake-canvas" id="snakeCanvas" width="360" height="360" aria-label="Snake game"></canvas>
+
+          <p class="faint" id="snakeStatus" style="margin:0;" data-i18n="game_status_ready">Pulsa iniciar para jugar.</p>
+          <p class="faint" style="margin:0;" data-i18n="game_controls">Controles: flechas o WASD.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <script>
@@ -748,7 +824,18 @@
       contact_details_title: "Detalles",
       contact_location: "Perth, Western Australia",
 
-      footer_left: "Single-file HTML · GitHub Pages"
+      footer_left: "Single-file HTML · GitHub Pages",
+
+      game_title: "Snake clásico",
+      game_hint: "Come y crece",
+      game_desc: "Muévete, recoge la comida y evita chocar con el borde o contigo.",
+      game_subtitle: "Easter egg",
+      game_score: "Puntos: 0",
+      game_start: "Iniciar",
+      game_pause: "Pausa",
+      game_reset: "Reiniciar",
+      game_status_ready: "Pulsa iniciar para jugar.",
+      game_controls: "Controles: flechas o WASD."
     },
 
     en: {
@@ -854,7 +941,33 @@
       contact_details_title: "Details",
       contact_location: "Perth, Western Australia",
 
-      footer_left: "Single-file HTML · GitHub Pages"
+      footer_left: "Single-file HTML · GitHub Pages",
+
+      game_title: "Classic Snake",
+      game_hint: "Eat and grow",
+      game_desc: "Move, collect food, and avoid hitting the walls or yourself.",
+      game_subtitle: "Easter egg",
+      game_score: "Score: 0",
+      game_start: "Start",
+      game_pause: "Pause",
+      game_reset: "Reset",
+      game_status_ready: "Press start to play.",
+      game_controls: "Controls: arrows or WASD."
+    }
+  };
+
+  const SNAKE_MSG = {
+    es: {
+      ready: "Pulsa iniciar para jugar.",
+      running: "En juego.",
+      paused: "Pausa.",
+      over: "Game over. Pulsa reiniciar."
+    },
+    en: {
+      ready: "Press start to play.",
+      running: "Playing.",
+      paused: "Paused.",
+      over: "Game over. Press reset."
     }
   };
 
@@ -901,6 +1014,8 @@
 
     // Set <html lang="">
     document.documentElement.setAttribute("lang", lang);
+
+    updateSnakeUI();
   }
 
   function escapeHtml(str){
@@ -942,6 +1057,182 @@
   const cv = document.getElementById("cvLink");
   cv.href = CV_URL;
   cv.setAttribute("download", "Maria-Sala-CV.pdf");
+
+  // ---------- Snake game ----------
+  const snakeCanvas = document.getElementById("snakeCanvas");
+  const snakeCtx = snakeCanvas.getContext("2d");
+  const snakeScore = document.getElementById("snakeScore");
+  const snakeStatus = document.getElementById("snakeStatus");
+  const snakeStart = document.getElementById("snakeStart");
+  const snakePause = document.getElementById("snakePause");
+  const snakeReset = document.getElementById("snakeReset");
+
+  const gridSize = 20;
+  const cellSize = snakeCanvas.width / gridSize;
+  const snakeState = {
+    snake: [],
+    food: { x: 5, y: 5 },
+    dir: { x: 1, y: 0 },
+    nextDir: { x: 1, y: 0 },
+    score: 0,
+    running: false,
+    gameOver: false,
+    lastStep: 0,
+    speedMs: 120
+  };
+
+  function updateSnakeUI(){
+    const label = (lang === "es") ? "Puntos: " : "Score: ";
+    snakeScore.textContent = label + snakeState.score;
+    const msgSet = SNAKE_MSG[lang] || SNAKE_MSG.es;
+    let key = "ready";
+    if (snakeState.gameOver) key = "over";
+    else if (snakeState.running) key = "running";
+    else if (!snakeState.running && snakeState.lastStep > 0) key = "paused";
+    snakeStatus.textContent = msgSet[key];
+  }
+
+  function spawnFood(){
+    let found = false;
+    while (!found) {
+      const candidate = {
+        x: Math.floor(Math.random() * gridSize),
+        y: Math.floor(Math.random() * gridSize)
+      };
+      found = !snakeState.snake.some(part => part.x === candidate.x && part.y === candidate.y);
+      if (found) snakeState.food = candidate;
+    }
+  }
+
+  function resetSnake(){
+    snakeState.snake = [
+      { x: 9, y: 10 },
+      { x: 8, y: 10 },
+      { x: 7, y: 10 }
+    ];
+    snakeState.dir = { x: 1, y: 0 };
+    snakeState.nextDir = { x: 1, y: 0 };
+    snakeState.score = 0;
+    snakeState.running = false;
+    snakeState.gameOver = false;
+    snakeState.lastStep = 0;
+    spawnFood();
+    drawSnake();
+    updateSnakeUI();
+  }
+
+  function drawSnake(){
+    snakeCtx.clearRect(0, 0, snakeCanvas.width, snakeCanvas.height);
+    snakeCtx.fillStyle = "rgba(125,211,252,.25)";
+    snakeCtx.fillRect(0, 0, snakeCanvas.width, snakeCanvas.height);
+
+    snakeCtx.fillStyle = "#22c55e";
+    snakeState.snake.forEach((part, idx) => {
+      snakeCtx.fillStyle = idx === 0 ? "#7dd3fc" : "#22c55e";
+      snakeCtx.fillRect(part.x * cellSize, part.y * cellSize, cellSize - 1, cellSize - 1);
+    });
+
+    snakeCtx.fillStyle = "#f97316";
+    snakeCtx.fillRect(
+      snakeState.food.x * cellSize,
+      snakeState.food.y * cellSize,
+      cellSize - 1,
+      cellSize - 1
+    );
+  }
+
+  function setDirection(x, y){
+    const next = { x, y };
+    if (next.x === -snakeState.dir.x && next.y === -snakeState.dir.y) return;
+    snakeState.nextDir = next;
+  }
+
+  function stepSnake(timestamp){
+    if (!snakeState.running) return;
+    if (timestamp - snakeState.lastStep < snakeState.speedMs) {
+      requestAnimationFrame(stepSnake);
+      return;
+    }
+    snakeState.lastStep = timestamp;
+    snakeState.dir = snakeState.nextDir;
+    const head = {
+      x: snakeState.snake[0].x + snakeState.dir.x,
+      y: snakeState.snake[0].y + snakeState.dir.y
+    };
+
+    const hitWall = head.x < 0 || head.x >= gridSize || head.y < 0 || head.y >= gridSize;
+    const hitSelf = snakeState.snake.some(part => part.x === head.x && part.y === head.y);
+    if (hitWall || hitSelf) {
+      snakeState.running = false;
+      snakeState.gameOver = true;
+      updateSnakeUI();
+      drawSnake();
+      return;
+    }
+
+    snakeState.snake.unshift(head);
+    if (head.x === snakeState.food.x && head.y === snakeState.food.y) {
+      snakeState.score += 1;
+      spawnFood();
+    } else {
+      snakeState.snake.pop();
+    }
+
+    updateSnakeUI();
+    drawSnake();
+    requestAnimationFrame(stepSnake);
+  }
+
+  function startSnake(){
+    if (snakeState.gameOver) resetSnake();
+    if (snakeState.running) return;
+    snakeState.running = true;
+    updateSnakeUI();
+    requestAnimationFrame(stepSnake);
+  }
+
+  function pauseSnake(){
+    if (!snakeState.running) return;
+    snakeState.running = false;
+    updateSnakeUI();
+  }
+
+  snakeStart.addEventListener("click", startSnake);
+  snakePause.addEventListener("click", pauseSnake);
+  snakeReset.addEventListener("click", resetSnake);
+
+  window.addEventListener("keydown", (event) => {
+    switch (event.key) {
+      case "ArrowUp":
+      case "w":
+      case "W":
+        event.preventDefault();
+        setDirection(0, -1);
+        break;
+      case "ArrowDown":
+      case "s":
+      case "S":
+        event.preventDefault();
+        setDirection(0, 1);
+        break;
+      case "ArrowLeft":
+      case "a":
+      case "A":
+        event.preventDefault();
+        setDirection(-1, 0);
+        break;
+      case "ArrowRight":
+      case "d":
+      case "D":
+        event.preventDefault();
+        setDirection(1, 0);
+        break;
+      default:
+        break;
+    }
+  });
+
+  resetSnake();
 
   // Init i18n on load
   applyI18n();
