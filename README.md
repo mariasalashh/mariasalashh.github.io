@@ -1,68 +1,92 @@
-# Maria Sala
+# Maria Sala — Cybersecurity & Artificial Intelligence Portfolio
 
-🌐 **Personal Website & Professional Portfolio**  
-🛡️ Cybersecurity Analyst · Blue Team · SOC Operations
+🌐 Personal Website & Professional Portfolio  
+🛡️ Cybersecurity Analyst · Blue Team · SOC Operations · AI Automation  
 
-This repository hosts my personal website, built with GitHub Pages, where I present my professional profile, background, and selected work in cybersecurity.
+This repository hosts my personal professional website built with GitHub Pages, showcasing my background, cybersecurity projects, and applied AI security research.
 
-The website serves as a central point for my CV, professional information, and future portfolio projects.
-
----
-
-## About Me
-
-I am a cybersecurity professional with a strong focus on **defensive security**, **incident response**, and **security operations (SOC)**.
-
-I hold a **Master’s Degree in Cybersecurity** and have an academic background in **Criminology**, which allows me to approach security incidents with both technical rigor and investigative depth. My experience combines structured analysis, operational discipline, and clear technical reporting.
-
-My profile is oriented toward SOC environments, where accuracy, methodology, and attention to detail are essential.
+The website serves as a central hub for my CV, technical portfolio, and documented security projects.
 
 ---
 
-## Areas of Focus
+## 👩‍💻 About Me
+
+I am a cybersecurity and artificial intelligence student and practitioner with a strong focus on defensive security, incident response, and Security Operations Center (SOC) workflows.
+
+My background combines cybersecurity engineering, criminology, and AI automation, enabling a structured and investigative approach to security incidents, log analysis, and threat detection.
+
+My professional profile is oriented toward SOC and Blue Team environments, where precision, methodology, and technical documentation are essential.
+
+---
+
+## 🔬 Featured Projects
+
+### 🔹 AI SOC Agent – Automated Security Log Analysis
+An AI-driven SOC agent designed to analyze system logs, detect security incidents, and generate automated professional incident reports.
+
+**Key capabilities:**
+- Detection of SSH brute-force attacks  
+- Web application threat pattern identification  
+- Indicators of Compromise (IOC) extraction  
+- Automated SOC-style reporting  
+
+👉 Repository: https://github.com/mariasalashh/ai-soc-agent  
+
+---
+
+### 🔹 Segmented Smart Home Security Infrastructure (Master’s Thesis)
+Design and implementation of a segmented home automation infrastructure using pfSense, VLANs, MQTT, and security monitoring, focused on isolation and defense-in-depth.
+
+---
+
+## 🎯 Areas of Focus
 
 - Security Operations Center (SOC)
 - Incident Detection, Analysis, and Response
-- Threat Analysis & Investigation
 - Defensive Security & Monitoring
-- Log Analysis & Security Events
-- Network and System Security Fundamentals
+- Threat Analysis and Investigation
+- Log Analysis and Security Event Correlation
+- Network and System Security Architecture
+- AI Automation applied to Cybersecurity
 
 ---
 
-## Technical Skills
+## 🛠️ Technical Skills
 
 - SIEM & Log Analysis  
-- Incident Handling & Response Procedures  
+- Incident Response Procedures  
 - Network Traffic Analysis  
 - Threat Intelligence Fundamentals  
-- Linux & Windows Security Fundamentals  
+- Linux & Windows Security  
+- pfSense, VLANs, and Network Segmentation  
 - Security Monitoring & Alert Triage  
+- AI Agents & Prompt Engineering  
 
 ---
 
-## Website Content
+## 📚 Website Content
 
 The website includes:
 
-- Professional profile and background  
+- Professional profile and biography  
 - Downloadable CV  
 - Education and certifications  
-- Selected projects and case studies (published progressively)  
+- Technical portfolio and documented labs  
+- AI and cybersecurity automation projects  
 
-🚧 Portfolio projects will be added over time as part of my professional development.
-
----
-
-## Professional Objective
-
-To continue developing as a **Cybersecurity Analyst** within **Blue Team / SOC** environments, contributing to the detection, analysis, and mitigation of security threats in real-world operational contexts.
+Portfolio projects are continuously expanded as part of ongoing professional development.
 
 ---
 
-## Contact
+## 🎓 Professional Objective
 
-For professional enquiries, please get in touch via the contact information provided on the website.
+To continue developing as a Cybersecurity Analyst within Blue Team and SOC environments, applying AI-driven automation to security monitoring, detection, and incident response.
 
-🔗 **Website:** https://mariasalashh.github.io/
+---
+
+## 📬 Contact
+
+For professional inquiries, please use the contact details provided on the website.
+
+🔗 Website: https://mariasalashh.github.io/
 
