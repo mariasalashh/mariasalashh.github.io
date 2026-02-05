@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -7,12 +8,14 @@
   <title>Maria Sala — Cybersecurity Analyst | SOC & Incident Response</title>
 
   <!-- SEO -->
-  <meta name="description" content="Maria Sala. Cybersecurity Analyst focused on SOC & Incident Response. Based in Perth, Australia." />
+  <meta name="description"
+    content="Maria Sala. Cybersecurity Analyst focused on SOC & Incident Response. Based in Perth, Australia." />
   <meta name="robots" content="index,follow" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Maria Sala — Cybersecurity Analyst | SOC & Incident Response" />
-  <meta property="og:description" content="Defensive security · SOC workflows · Incident detection, triage and response · Perth, Australia." />
+  <meta property="og:description"
+    content="Defensive security · SOC workflows · Incident detection, triage and response · Perth, Australia." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mariasalashh.github.io/" />
 
@@ -30,112 +33,174 @@
   </script>
 
   <style>
-    :root{
+    :root {
       --bg: #0b0f17;
-      --panel: rgba(255,255,255,.06);
-      --panel2: rgba(255,255,255,.08);
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.70);
-      --faint: rgba(255,255,255,.55);
-      --line: rgba(255,255,255,.12);
+      --panel: rgba(255, 255, 255, .06);
+      --panel2: rgba(255, 255, 255, .08);
+      --text: rgba(255, 255, 255, .92);
+      --muted: rgba(255, 255, 255, .70);
+      --faint: rgba(255, 255, 255, .55);
+      --line: rgba(255, 255, 255, .12);
 
       --accent: #7dd3fc;
-      --accent2:#a78bfa;
-      --cta: #22c55e; /* CONTACT highlight (green) */
+      --accent2: #a78bfa;
+      --cta: #22c55e;
+      /* CONTACT highlight (green) */
 
-      --shadow: 0 14px 38px rgba(0,0,0,.38);
+      --shadow: 0 14px 38px rgba(0, 0, 0, .38);
       --r: 16px;
       --r2: 22px;
       --max: 1100px;
       --pad: clamp(16px, 2.4vw, 28px);
       --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --focus: 0 0 0 3px rgba(34,197,94,.35);
-    }
-    [data-theme="light"]{
-      --bg: #f6f7fb;
-      --panel: rgba(0,0,0,.05);
-      --panel2: rgba(0,0,0,.07);
-      --text: rgba(12,14,18,.92);
-      --muted: rgba(12,14,18,.70);
-      --faint: rgba(12,14,18,.55);
-      --line: rgba(12,14,18,.12);
-      --shadow: 0 14px 30px rgba(12,18,28,.12);
+      --focus: 0 0 0 3px rgba(34, 197, 94, .35);
     }
 
-    *{ box-sizing:border-box; }
-    html{ scroll-behavior:smooth; }
-    body{
-      margin:0;
+    [data-theme="light"] {
+      --bg: #f6f7fb;
+      --panel: rgba(0, 0, 0, .05);
+      --panel2: rgba(0, 0, 0, .07);
+      --text: rgba(12, 14, 18, .92);
+      --muted: rgba(12, 14, 18, .70);
+      --faint: rgba(12, 14, 18, .55);
+      --line: rgba(12, 14, 18, .12);
+      --shadow: 0 14px 30px rgba(12, 18, 28, .12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
       font-family: var(--font);
       color: var(--text);
       background:
-        radial-gradient(1100px 540px at 15% 0%, rgba(125,211,252,.18), transparent 60%),
-        radial-gradient(980px 540px at 85% 10%, rgba(167,139,250,.15), transparent 65%),
+        radial-gradient(1100px 540px at 15% 0%, rgba(125, 211, 252, .18), transparent 60%),
+        radial-gradient(980px 540px at 85% 10%, rgba(167, 139, 250, .15), transparent 65%),
         linear-gradient(180deg, var(--bg), #0e1422);
-      min-height:100vh;
+      min-height: 100vh;
     }
-    [data-theme="light"] body{
+
+    [data-theme="light"] body {
       background:
-        radial-gradient(1100px 540px at 15% 0%, rgba(125,211,252,.14), transparent 60%),
-        radial-gradient(980px 540px at 85% 10%, rgba(167,139,250,.10), transparent 65%),
+        radial-gradient(1100px 540px at 15% 0%, rgba(125, 211, 252, .14), transparent 60%),
+        radial-gradient(980px 540px at 85% 10%, rgba(167, 139, 250, .10), transparent 65%),
         linear-gradient(180deg, var(--bg), #eef1f8);
     }
 
-    a{ color:inherit; text-decoration:none; }
-    a:focus-visible, button:focus-visible{ outline:none; box-shadow: var(--focus); }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-    .container{ width:min(var(--max), 100% - (var(--pad) * 2)); margin:0 auto; }
-    .card{
-      border:1px solid var(--line);
+    a:focus-visible,
+    button:focus-visible {
+      outline: none;
+      box-shadow: var(--focus);
+    }
+
+    .container {
+      width: min(var(--max), 100% - (var(--pad) * 2));
+      margin: 0 auto;
+    }
+
+    .card {
+      border: 1px solid var(--line);
       background: linear-gradient(180deg, var(--panel2), transparent);
       border-radius: var(--r2);
       box-shadow: var(--shadow);
       backdrop-filter: blur(12px);
     }
-    .pad{ padding: 22px; }
-    @media (max-width:520px){ .pad{ padding: 18px; } }
 
-    .mono{ font-family: var(--mono); }
-    .muted{ color: var(--muted); }
-    .faint{ color: var(--faint); }
+    .pad {
+      padding: 22px;
+    }
+
+    @media (max-width:520px) {
+      .pad {
+        padding: 18px;
+      }
+    }
+
+    .mono {
+      font-family: var(--mono);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .faint {
+      color: var(--faint);
+    }
 
     /* NAV */
-    header{
+    header {
       position: sticky;
-      top:0;
-      z-index:50;
-      border-bottom:1px solid var(--line);
-      background: rgba(10,12,18,.50);
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid var(--line);
+      background: rgba(10, 12, 18, .50);
       backdrop-filter: blur(16px);
     }
-    [data-theme="light"] header{ background: rgba(246,247,251,.75); }
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
+
+    [data-theme="light"] header {
+      background: rgba(246, 247, 251, .75);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
       padding: 12px 0;
       flex-wrap: wrap;
     }
-    .brand{
-      display:flex; align-items:center; gap:10px;
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       min-width: 260px;
     }
-    .logo{
-      width:34px; height:34px; border-radius: 12px;
-      border:1px solid var(--line);
+
+    .logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
       background:
-        radial-gradient(10px 10px at 30% 30%, rgba(125,211,252,.9), transparent 70%),
-        radial-gradient(12px 12px at 70% 70%, rgba(167,139,250,.85), transparent 70%),
+        radial-gradient(10px 10px at 30% 30%, rgba(125, 211, 252, .9), transparent 70%),
+        radial-gradient(12px 12px at 70% 70%, rgba(167, 139, 250, .85), transparent 70%),
         linear-gradient(180deg, var(--panel2), transparent);
       box-shadow: var(--shadow);
     }
-    .brand strong{ display:block; letter-spacing:-0.02em; }
-    .brand span{ display:block; font-size:12px; color: var(--muted); }
 
-    nav{ display:flex; gap:6px; flex-wrap:wrap; justify-content:center; }
-    nav a{
+    .brand strong {
+      display: block;
+      letter-spacing: -0.02em;
+    }
+
+    .brand span {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
       font-size: 13px;
       color: var(--muted);
       padding: 9px 10px;
@@ -143,82 +208,119 @@
       border: 1px solid transparent;
       transition: transform .15s ease, border-color .15s ease, background .15s ease, color .15s ease;
     }
-    nav a:hover{
+
+    nav a:hover {
       color: var(--text);
       border-color: var(--line);
-      background: rgba(255,255,255,.03);
+      background: rgba(255, 255, 255, .03);
       transform: translateY(-1px);
     }
-    nav a.active{
+
+    nav a.active {
       color: var(--text);
-      border-color: rgba(125,211,252,.40);
-      background: rgba(125,211,252,.10);
+      border-color: rgba(125, 211, 252, .40);
+      background: rgba(125, 211, 252, .10);
     }
 
-    .actions{ display:flex; gap:8px; align-items:center; }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    .actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       padding: 10px 12px;
       border-radius: 12px;
       border: 1px solid var(--line);
       background: linear-gradient(180deg, var(--panel2), transparent);
       color: var(--text);
-      cursor:pointer;
-      user-select:none;
+      cursor: pointer;
+      user-select: none;
       transition: transform .15s ease, border-color .15s ease, background .15s ease;
       font-size: 13px;
       white-space: nowrap;
     }
-    .btn:hover{ transform: translateY(-1px); border-color: rgba(167,139,250,.35); }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      border-color: rgba(167, 139, 250, .35);
+    }
 
     /* CONTACT highlight button */
-    .btn.contact{
-      border-color: rgba(34,197,94,.55);
-      background: linear-gradient(180deg, rgba(34,197,94,.32), rgba(34,197,94,.12));
-      color: rgba(255,255,255,.95);
+    .btn.contact {
+      border-color: rgba(34, 197, 94, .55);
+      background: linear-gradient(180deg, rgba(34, 197, 94, .32), rgba(34, 197, 94, .12));
+      color: rgba(255, 255, 255, .95);
     }
-    [data-theme="light"] .btn.contact{
-      border-color: rgba(22,163,74,.55);
-      background: linear-gradient(180deg, rgba(34,197,94,.22), rgba(34,197,94,.10));
-      color: rgba(12,14,18,.92);
+
+    [data-theme="light"] .btn.contact {
+      border-color: rgba(22, 163, 74, .55);
+      background: linear-gradient(180deg, rgba(34, 197, 94, .22), rgba(34, 197, 94, .10));
+      color: rgba(12, 14, 18, .92);
     }
-    .btn.contact:hover{ border-color: rgba(34,197,94,.85); }
-    .btn.cv{
-      border-color: rgba(34,197,94,.40);
-      background: linear-gradient(180deg, rgba(34,197,94,.22), rgba(34,197,94,.08));
+
+    .btn.contact:hover {
+      border-color: rgba(34, 197, 94, .85);
     }
-    .btn.cv:hover{
-      border-color: rgba(34,197,94,.70);
-      background: linear-gradient(180deg, rgba(34,197,94,.30), rgba(34,197,94,.10));
+
+    .btn.cv {
+      border-color: rgba(34, 197, 94, .40);
+      background: linear-gradient(180deg, rgba(34, 197, 94, .22), rgba(34, 197, 94, .08));
+    }
+
+    .btn.cv:hover {
+      border-color: rgba(34, 197, 94, .70);
+      background: linear-gradient(180deg, rgba(34, 197, 94, .30), rgba(34, 197, 94, .10));
     }
 
     /* HERO */
-    .hero{ padding: 26px 0 10px; }
-    .hero-grid{
-      display:grid; gap:18px;
+    .hero {
+      padding: 26px 0 10px;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 18px;
       grid-template-columns: 1.25fr .75fr;
     }
-    @media (max-width: 980px){ .hero-grid{ grid-template-columns: 1fr; } }
 
-    h1{
+    @media (max-width: 980px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    h1 {
       margin: 0;
       font-size: clamp(28px, 4vw, 44px);
-      letter-spacing:-0.04em;
-      line-height:1.05;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
     }
-    .headline{
+
+    .headline {
       margin-top: 10px;
       font-size: clamp(15px, 1.6vw, 18px);
       color: var(--muted);
       max-width: 80ch;
-      line-height:1.55;
+      line-height: 1.55;
     }
-    .topline{
-      display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+
+    .topline {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
       margin-bottom: 12px;
     }
-    .tag{
-      display:inline-flex; align-items:center; gap:8px;
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       padding: 7px 11px;
       border-radius: 999px;
       border: 1px solid var(--line);
@@ -227,12 +329,30 @@
       color: var(--muted);
       white-space: nowrap;
     }
-    .tag b{ color: var(--text); font-weight: 650; }
 
-    .cta{ margin-top: 14px; display:flex; gap:10px; flex-wrap:wrap; }
-    .chips{ margin-top: 16px; display:flex; gap:8px; flex-wrap:wrap; }
-    .chip{
-      display:inline-flex; align-items:center; gap:8px;
+    .tag b {
+      color: var(--text);
+      font-weight: 650;
+    }
+
+    .cta {
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .chips {
+      margin-top: 16px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       padding: 8px 10px;
       border-radius: 999px;
       border: 1px solid var(--line);
@@ -241,95 +361,178 @@
       color: var(--muted);
       transition: transform .15s ease, border-color .15s ease;
     }
-    .chip:hover{ transform: translateY(-1px); border-color: rgba(125,211,252,.30); color: var(--text); }
 
-    section{ padding: 18px 0; }
-    .section-title{
-      display:flex;
-      align-items:baseline;
-      justify-content:space-between;
-      gap:14px;
+    .chip:hover {
+      transform: translateY(-1px);
+      border-color: rgba(125, 211, 252, .30);
+      color: var(--text);
+    }
+
+    section {
+      padding: 18px 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 14px;
       margin: 0 0 12px;
     }
-    .section-title h2{
-      margin:0;
+
+    .section-title h2 {
+      margin: 0;
       font-size: 18px;
-      letter-spacing:-0.01em;
+      letter-spacing: -0.01em;
     }
-    .section-title .hint{ font-size:12px; color: var(--faint); }
 
-    .grid{ display:grid; gap: 18px; }
-    .two{ grid-template-columns: 1fr 1fr; }
-    @media (max-width: 980px){ .two{ grid-template-columns: 1fr; } }
+    .section-title .hint {
+      font-size: 12px;
+      color: var(--faint);
+    }
 
-    .list{ display:grid; gap:12px; }
-    .item{
-      border:1px solid var(--line);
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .two {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 980px) {
+      .two {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .item {
+      border: 1px solid var(--line);
       border-radius: var(--r);
       background: linear-gradient(180deg, var(--panel2), transparent);
       padding: 14px;
       transition: transform .15s ease, border-color .15s ease;
     }
-    .item:hover{ transform: translateY(-1px); border-color: rgba(125,211,252,.25); }
 
-    .meta{ display:flex; gap:8px; flex-wrap:wrap; margin-top: 10px; }
+    .item:hover {
+      transform: translateY(-1px);
+      border-color: rgba(125, 211, 252, .25);
+    }
 
-    .proj-grid{
-      display:grid; gap: 12px;
+    .meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .proj-grid {
+      display: grid;
+      gap: 12px;
       grid-template-columns: repeat(3, 1fr);
     }
-    @media (max-width: 980px){ .proj-grid{ grid-template-columns: 1fr; } }
 
-    .proj{ min-height: 210px; display:flex; flex-direction:column; gap:10px; }
-    .proj h3{ margin:0; font-size: 14px; letter-spacing:-0.01em; }
-    .proj p{ margin:0; font-size: 13px; line-height: 1.55; color: var(--muted); }
-    .proj .actions{ margin-top:auto; }
+    @media (max-width: 980px) {
+      .proj-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
-    .kvs{ display:grid; gap:10px; }
-    .kv{
-      display:flex; justify-content:space-between; gap: 10px;
+    .proj {
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .proj h3 {
+      margin: 0;
+      font-size: 14px;
+      letter-spacing: -0.01em;
+    }
+
+    .proj p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .proj .actions {
+      margin-top: auto;
+    }
+
+    .kvs {
+      display: grid;
+      gap: 10px;
+    }
+
+    .kv {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
       padding: 10px 0;
       border-top: 1px dashed var(--line);
     }
-    .kv:first-child{ border-top:0; padding-top:0; }
-    .kv span{ color: var(--muted); font-size: 13px; }
-    .kv b{ font-weight: 650; font-size: 13px; }
 
-    .divider{
+    .kv:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .kv span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .kv b {
+      font-weight: 650;
+      font-size: 13px;
+    }
+
+    .divider {
       width: min(720px, 90%);
       height: 1px;
       margin: 10px auto 24px;
       border: 0;
-      background: linear-gradient(90deg, transparent, rgba(125,211,252,.45), rgba(167,139,250,.45), transparent);
+      background: linear-gradient(90deg, transparent, rgba(125, 211, 252, .45), rgba(167, 139, 250, .45), transparent);
     }
 
-    .snake{
-      display:grid;
+    .snake {
+      display: grid;
       gap: 12px;
-      justify-items:center;
+      justify-items: center;
     }
-    .snake-top{
-      width:100%;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
+
+    .snake-top {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
     }
-    .snake-canvas{
+
+    .snake-canvas {
       width: min(100%, 360px);
       height: auto;
       border-radius: 14px;
-      border:1px solid var(--line);
-      background: rgba(0,0,0,.18);
+      border: 1px solid var(--line);
+      background: rgba(0, 0, 0, .18);
       box-shadow: var(--shadow);
-      display:block;
-    }
-    [data-theme="light"] .snake-canvas{
-      background: rgba(0,0,0,.06);
+      display: block;
     }
 
-    footer{
+    [data-theme="light"] .snake-canvas {
+      background: rgba(0, 0, 0, .06);
+    }
+
+    footer {
       padding: 30px 0 44px;
       margin-top: 8px;
       border-top: 1px solid var(--line);
@@ -337,939 +540,951 @@
       font-size: 12px;
     }
 
-    @media (prefers-reduced-motion: reduce){
-      html{ scroll-behavior:auto; }
-      .btn, nav a, .chip, .item{ transition:none !important; }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .btn,
+      nav a,
+      .chip,
+      .item {
+        transition: none !important;
+      }
     }
   </style>
 </head>
 
 <body>
-<header>
-  <div class="container nav">
-    <div class="brand" aria-label="Site identity">
-      <div class="logo" aria-hidden="true"></div>
-      <div>
-        <strong id="brandName">Maria Sala</strong>
-        <span class="mono" id="brandLine" data-i18n="brand_line">Cybersecurity · SOC & Incident Response · AI Automation · Based in Perth, Australia</span>
-      </div>
-    </div>
-
-    <nav aria-label="Primary navigation">
-      <a href="#perfil" data-link data-i18n="nav_profile">Perfil</a>
-      <a href="#skills" data-link data-i18n="nav_skills">Skills</a>
-      <a href="#proyectos" data-link data-i18n="nav_projects">Proyectos</a>
-      <a href="#experiencia" data-link data-i18n="nav_experience">Experiencia</a>
-      <a href="#educacion" data-link data-i18n="nav_education">Educación</a>
-      <a href="#certificaciones" data-link data-i18n="nav_certs">Certificaciones</a>
-      <a href="#contacto" data-link data-i18n="nav_contact">Contacto</a>
-    </nav>
-
-    <div class="actions">
-      <button class="btn" id="langBtn" type="button" aria-label="Language toggle">
-        <span aria-hidden="true" id="langLabel">EN</span> <span class="mono" style="font-size:12px;" data-i18n="btn_lang">Modo</span>
-      </button>
-      <button class="btn" id="themeBtn" type="button" aria-label="Theme toggle">
-        <span id="themeIcon" aria-hidden="true">◐</span> <span class="mono" style="font-size:12px;" data-i18n="btn_theme">Tema</span>
-      </button>
-      <!-- ONLY contact button -->
-      <a class="btn contact" href="#contacto" id="navContactBtn" data-i18n="btn_contact"></a>
-    </div>
-  </div>
-</header>
-
-<main>
-  <!-- HERO -->
-  <section class="hero" id="perfil">
-    <div class="container hero-grid">
-      <div class="card pad">
-        <div class="topline">
-          <span class="tag mono"><span aria-hidden="true">●</span> <b id="locLine" data-i18n="hero_loc">Perth, Australia · Remote-ready</b></span>
-          <span class="tag mono"><b id="roleLine" data-i18n="hero_role">Security Analyst | SOC & Incident Response | AI & IT Operations</b></span>
-        </div>
-
-        <h1 id="nameLine">Maria Sala</h1>
-
-        <p class="headline" id="summaryLine" data-i18n="hero_summary">
-          Cybersecurity Analyst with a strong operational background in SOC-style incident analysis, monitoring and response, supported by over 10 years of experience in IT operations and technical environments.
-        </p>
-
-        <div class="cta">
-          <a class="btn" href="#proyectos" id="ctaProjects" data-i18n="btn_projects">Ver proyectos</a>
-          <a class="btn contact" href="#contacto" id="ctaContact" data-i18n="btn_contact">Contactar</a>
-        </div>
-
-        <div class="chips" aria-label="Technical highlights" id="chips"></div>
-
-        <div class="section-title" style="margin-top: 16px;">
-          <h2 id="focusTitle" data-i18n="links_title">Links</h2>
-          <span class="hint" id="focusHint" data-i18n="links_hint">Profiles & CV</span>
-        </div>
-
-        <div class="cta">
-          <a class="btn" href="https://www.linkedin.com/in/mariasalashh/" id="linkedinLink" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://github.com/mariasalashh" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="https://mariasalashh.wixsite.com/maria-sala" target="_blank" rel="noopener">Portfolio</a>
-          <a class="btn contact cv" href="#" id="cvLink" download data-i18n="btn_cv">Download CV</a>
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="Site identity">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <strong id="brandName">Maria Sala</strong>
+          <span class="mono" id="brandLine" data-i18n="brand_line">Cybersecurity · SOC & Incident Response · AI
+            Automation · Based in Perth, Australia</span>
         </div>
       </div>
 
-      <aside class="card pad" aria-label="Quick overview">
-        <div class="section-title">
-          <h2 id="quickTitle" data-i18n="quick_title">Resumen</h2>
-          <span class="hint" id="quickHint" data-i18n="quick_hint">At a glance</span>
-        </div>
+      <nav aria-label="Primary navigation">
+        <a href="#perfil" data-link data-i18n="nav_profile">Perfil</a>
+        <a href="#skills" data-link data-i18n="nav_skills">Skills</a>
+        <a href="#proyectos" data-link data-i18n="nav_projects">Proyectos</a>
+        <a href="#experiencia" data-link data-i18n="nav_experience">Experiencia</a>
+        <a href="#educacion" data-link data-i18n="nav_education">Educación</a>
+        <a href="#certificaciones" data-link data-i18n="nav_certs">Certificaciones</a>
+        <a href="#contacto" data-link data-i18n="nav_contact">Contacto</a>
+      </nav>
 
-        <div class="kvs">
-          <div class="kv"><span data-i18n="kv_location">Ubicación</span><b data-i18n="kv_location_val">Perth, WA</b></div>
-          <div class="kv"><span data-i18n="kv_focus">Enfoque</span><b data-i18n="kv_focus_val">SOC · Incident Response</b></div>
-          <div class="kv"><span data-i18n="kv_email">Email</span><b class="mono">mariasalashh@gmail.com</b></div>
-          <div class="kv"><span data-i18n="kv_phone">Teléfono</span><b class="mono">+61 04 93 583 554</b></div>
-          <div class="kv"><span data-i18n="kv_langs">Idiomas</span><b data-i18n="kv_langs_val">ES (Native) · EN (C1) · PT (C2)</b></div>
-        </div>
-
-        <p class="faint" id="quickNote" data-i18n="quick_note" style="margin: 12px 0 0; line-height:1.5;">
-          Structured reporting and clear communication with both technical and non-technical stakeholders.
-        </p>
-
-        <!-- removed: copy email + email buttons (per your request) -->
-      </aside>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="container">
-      <div class="card pad">
-        <div class="section-title">
-          <h2 data-i18n="skills_title">Skills</h2>
-          <span class="hint" data-i18n="skills_hint">Core competencies aligned with SOC workflows.</span>
-        </div>
-
-        <div class="grid two">
-          <div class="item">
-            <h3 style="margin:0;font-size:14px;" data-i18n="skills_cyber_title">Cybersecurity & SOC</h3>
-            <p class="muted" style="margin:8px 0 0; line-height:1.6;" data-i18n="skills_cyber_body">
-              Incident response (SOC workflows), phishing & brute-force analysis, log monitoring, alert triage, access control, incident reporting, basic threat investigation, containment & remediation.
-            </p>
-          </div>
-
-          <div class="item">
-            <h3 style="margin:0;font-size:14px;" data-i18n="skills_it_title">IT & Systems</h3>
-            <p class="muted" style="margin:8px 0 0; line-height:1.6;" data-i18n="skills_it_body">
-              Windows/macOS/Linux, Microsoft 365 & Active Directory, networking (TCP/IP, DNS, VPN), ITSM, troubleshooting, system configuration & maintenance.
-            </p>
-          </div>
-
-          <div class="item">
-            <h3 style="margin:0;font-size:14px;" data-i18n="skills_ai_title">Artificial Intelligence</h3>
-            <p class="muted" style="margin:8px 0 0; line-height:1.6;" data-i18n="skills_ai_body">
-              Applied AI fundamentals, data analysis, automation, AI tools, data-driven problem solving.
-            </p>
-          </div>
-
-          <div class="item">
-            <h3 style="margin:0;font-size:14px;" data-i18n="skills_lang_title">Languages</h3>
-            <p class="muted" style="margin:8px 0 0; line-height:1.6;" data-i18n="skills_lang_body">
-              Spanish (Native), English (C1), Portuguese (C2).
-            </p>
-          </div>
-        </div>
+      <div class="actions">
+        <button class="btn" id="langBtn" type="button" aria-label="Language toggle">
+          <span aria-hidden="true" id="langLabel">EN</span> <span class="mono" style="font-size:12px;"
+            data-i18n="btn_lang">Modo</span>
+        </button>
+        <button class="btn" id="themeBtn" type="button" aria-label="Theme toggle">
+          <span id="themeIcon" aria-hidden="true">◐</span> <span class="mono" style="font-size:12px;"
+            data-i18n="btn_theme">Tema</span>
+        </button>
+        <!-- ONLY contact button -->
+        <a class="btn contact" href="#contacto" id="navContactBtn" data-i18n="btn_contact"></a>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- PROJECTS -->
-  <section id="proyectos">
-    <div class="container">
-      <div class="card pad">
-        <div class="section-title">
-          <h2 data-i18n="projects_title">Proyectos</h2>
-          <span class="hint" data-i18n="projects_hint">Selected work aligned with defensive security and operational analysis.</span>
-        </div>
-
-        <div class="proj-grid">
-          <article class="item proj">
-            <h3 data-i18n="p1_title">Segmented Smart Home Security Infrastructure (Master’s Final Project)</h3>
-            <p data-i18n="p1_body">
-              Design and implementation of a segmented smart home infrastructure focused on secure architecture, network segmentation, isolation, monitoring and access control to protect IoT environments.
-            </p>
-            <div class="meta">
-              <span class="tag mono"><b data-i18n="tag_network">Network</b></span>
-              <span class="tag mono"><b>IoT</b></span>
-              <span class="tag mono"><b data-i18n="tag_defense">Defense</b></span>
-            </div>
-            <div class="actions">
-              <a class="btn" href="#" target="_blank" rel="noopener" data-i18n="btn_repo">Repo</a>
-            </div>
-          </article>
-
-          <article class="item proj">
-            <h3 data-i18n="p2_title">SOC Case Studies (Detection · Triage · Response)</h3>
-            <p data-i18n="p2_body">
-              SOC-style scenarios including phishing attempts, authentication attacks and suspicious network activity, following a workflow: detection, triage, analysis, containment and remediation.
-            </p>
-            <div class="meta">
-              <span class="tag mono"><b>SOC</b></span>
-              <span class="tag mono"><b data-i18n="tag_ir">IR</b></span>
-              <span class="tag mono"><b data-i18n="tag_reporting">Reporting</b></span>
-            </div>
-            <div class="actions">
-              <a class="btn" href="#" target="_blank" rel="noopener" data-i18n="btn_repo">Repo</a>
-            </div>
-          </article>
-
-          <article class="item proj">
-            <h3 data-i18n="p3_title">AI SOC Agent – Automated Security Log Analysis</h3>
-            <p data-i18n="p3_body">
-              AI-driven SOC agent that analyzes system logs, detects brute-force and web application attacks, extracts Indicators of Compromise (IOCs), and generates automated SOC-style incident reports. Demonstrates AI automation, prompt engineering, and Blue Team cybersecurity workflows.
-            </p>
-            <div class="meta">
-              <span class="tag mono"><b data-i18n="tag_ai">AI</b></span>
-              <span class="tag mono"><b data-i18n="tag_soc">SOC</b></span>
-              <span class="tag mono"><b data-i18n="tag_blue_team">Blue Team</b></span>
-              <span class="tag mono"><b data-i18n="tag_automation">Automation</b></span>
-            </div>
-            <div class="actions">
-              <a class="btn" href="https://github.com/mariasalashh/ai-soc-agent" target="_blank" rel="noopener" data-i18n="btn_repo">Repo</a>
-            </div>
-          </article>
-        </div>
-
-        <p class="faint" style="margin: 12px 0 0; line-height:1.5;" data-i18n="projects_note">
-          
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experiencia">
-    <div class="container">
-      <div class="card pad">
-        <div class="section-title">
-          <h2 data-i18n="exp_title">Experiencia</h2>
-          <span class="hint" data-i18n="exp_hint">Operational, investigative and technical background.</span>
-        </div>
-
-        <div class="list">
-          <div class="item">
-            <div class="tag mono"><b data-i18n="exp0_date">Jan 2026 - Present</b> · <span data-i18n="exp0_company">Personal Projects · Freelance</span></div>
-            <p class="muted" style="margin:10px 0 0; line-height:1.6;">
-              <span data-i18n="exp0_title">Cybersecurity & AI Automation Developer</span><br>
-              <span data-i18n="exp0_location">Perth, Western Australia, Australia · Remote</span><br><br>
-            <span data-i18n="exp0_body">
-              Cybersecurity and Artificial Intelligence student and practitioner with hands-on experience in SOC operations, Blue Team methodologies, and AI-driven security automation.
-              Designed and implemented security projects focused on log analysis, incident detection, and automated reporting using AI and scripting tools. Developed an AI SOC Agent capable of identifying brute-force attacks, web application threats, and extracting Indicators of Compromise (IOCs).
-              Currently completing a Diploma in Artificial Intelligence in Australia while pursuing advanced cybersecurity studies. Strong foundation in networking, system administration, and security monitoring, with practical labs in pfSense, SIEM, and automation workflows.
-              Key interests: SOC analysis, incident response, security engineering, and AI automation applied to cybersecurity.
-            </span>
-              <br><br>
-              <span data-i18n="exp0_portfolio_label">Portfolio</span>:
-              <a href="https://mariasalashh.github.io" target="_blank" rel="noopener">mariasalashh.github.io</a>
-            </p>
-          </div>
-          <div class="item">
-            <div class="tag mono"><b>2018 - 2025</b> · <span data-i18n="exp1_company">Spanish National Police (Police Headquarters)</span></div>
-            <p class="muted" style="margin:10px 0 0; line-height:1.6;" data-i18n="exp1_body">
-              Cybersecurity / IT Analyst role: technical assistance and troubleshooting, user access management, system configuration, participation in incident identification, analysis and response activities, monitoring systems and logs, documentation of SOPs, and collaboration to maintain secure and stable operations.
-            </p>
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="perfil">
+      <div class="container hero-grid">
+        <div class="card pad">
+          <div class="topline">
+            <span class="tag mono"><span aria-hidden="true">●</span> <b id="locLine" data-i18n="hero_loc">Perth,
+                Australia · Remote-ready</b></span>
+            <span class="tag mono"><b id="roleLine" data-i18n="hero_role">Security Analyst | SOC & Incident Response |
+                AI & IT Operations</b></span>
           </div>
 
-          <div class="item">
-            <div class="tag mono"><b>2010 - 2016</b> · <span data-i18n="exp2_company">Spanish National Police (IT Operations)</span></div>
-            <p class="muted" style="margin:10px 0 0; line-height:1.6;" data-i18n="exp2_body">
-              Network Analyst / IT support in operational environments: resolving hardware/software/access issues, assisting with configuration and administration, participating in incident identification and response, monitoring systems and logs to detect anomalies, applying security best practices, and documenting incidents and procedures.
-            </p>
-          </div>
+          <h1 id="nameLine">Maria Sala</h1>
 
-          <div class="item">
-            <div class="tag mono"><b>2007 - 2025</b> · <span data-i18n="exp3_company">Spanish National Police</span></div>
-            <p class="muted" style="margin:10px 0 0; line-height:1.6;" data-i18n="exp3_body">
-              Law Enforcement Officer across operational, investigative and technical roles, including criminal investigations, evidence management, cybercrime investigations, and support as IT and cybersecurity analyst in networked environments.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section id="educacion">
-    <div class="container">
-      <div class="card pad">
-        <div class="section-title">
-          <h2 data-i18n="edu_title">Educación</h2>
-          <span class="hint" data-i18n="edu_hint">Academic training and specialization.</span>
-        </div>
-
-        <div class="list">
-          <div class="item">
-            <div class="tag mono"><b>2025 - 2026</b> · <span data-i18n="edu1_title">Diploma of Artificial Intelligence</span></div>
-            <p class="muted" style="margin:10px 0 0;" data-i18n="edu1_body">Greystone College, Australia (in progress)</p>
-          </div>
-
-          <div class="item">
-            <div class="tag mono"><b data-i18n="edu2_title">Master’s Degree in Cybersecurity</b></div>
-            <p class="muted" style="margin:10px 0 0;" data-i18n="edu2_body">
-              UNIR University, Spain. Focus on network security, incident response, security auditing and cyber threat analysis. Master’s Final Project: segmented smart home infrastructure (assessment expected March 2026).
-            </p>
-          </div>
-
-          <div class="item">
-            <div class="tag mono"><b data-i18n="edu3_title">Bachelor’s Degree in Criminology (Cybercrime specialization)</b></div>
-            <p class="muted" style="margin:10px 0 0;" data-i18n="edu3_body">UEMC University, Spain.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certificaciones">
-    <div class="container">
-      <div class="card pad">
-        <div class="section-title">
-          <h2 data-i18n="certs_title">Certificaciones</h2>
-          <span class="hint" data-i18n="certs_hint">Verifiable credentials.</span>
-        </div>
-
-        <div class="list" id="certList"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contacto">
-    <div class="container">
-      <div class="card pad">
-        <div class="section-title">
-          <h2 data-i18n="contact_title">Contacto</h2>
-          <span class="hint" data-i18n="contact_hint">Let’s talk.</span>
-        </div>
-
-        <div class="grid two">
-          <div class="item">
-            <h3 style="margin:0;font-size:14px;" data-i18n="contact_cta_title"></h3>
-            <p class="muted" style="margin:10px 0 0; line-height:1.6;" data-i18n="contact_cta_body">
-              For professional enquiries and further information, contact me.
-            </p>
-            <div class="cta" style="margin-top: 12px;">
-              <!-- ONLY contact button -->
-              <a class="btn contact" id="contactBtn" href="mailto:mariasalashh@gmail.com" data-i18n="btn_contact">Contactar</a>
-            </div>
-          </div>
-
-          <div class="item">
-            <h3 style="margin:0;font-size:14px;" data-i18n="contact_details_title">Details</h3>
-            <p class="muted" style="margin:10px 0 0;"><span class="mono">mariasalashh@gmail.com</span></p>
-            <p class="muted" style="margin:8px 0 0;"><span class="mono">+61 04 93 583 554</span></p>
-            <p class="muted" style="margin:8px 0 0;" data-i18n="contact_location">Perth, Western Australia</p>
-          </div>
-        </div>
-
-        <p class="faint" style="margin: 12px 0 0;">© <span id="year"></span> Maria Sala</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container" style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
-      <span data-i18n="footer_left">Single-file HTML · GitHub Pages</span>
-      <span class="mono">mariasalashh.github.io</span>
-    </div>
-  </footer>
-
-  <hr class="divider" aria-hidden="true" />
-  <!-- GAME -->
-  <section id="juego">
-    <div class="container">
-      <div class="card pad">
-        <div class="section-title">
-          <h2 data-i18n="game_title">Snake clásico</h2>
-          <span class="hint" data-i18n="game_hint">Come y crece</span>
-        </div>
-        <p class="faint" style="margin:0 0 8px;" data-i18n="game_subtitle">Easter egg</p>
-
-        <div class="snake">
-          <p class="muted" style="margin:0; line-height:1.6; text-align:center;" data-i18n="game_desc">
-            Muévete, recoge la comida y evita chocar con el borde o contigo.
+          <p class="headline" id="summaryLine" data-i18n="hero_summary">
+            Cybersecurity Analyst with a strong operational background in SOC-style incident analysis, monitoring and
+            response, supported by over 10 years of experience in IT operations and technical environments.
           </p>
 
-          <div class="snake-top">
-            <div class="mono" id="snakeScore" data-i18n="game_score">Puntos: 0</div>
-            <div class="actions">
-              <button class="btn" id="snakeStart" type="button" data-i18n="game_start">Iniciar</button>
-              <button class="btn" id="snakePause" type="button" data-i18n="game_pause">Pausa</button>
-              <button class="btn" id="snakeReset" type="button" data-i18n="game_reset">Reiniciar</button>
+          <div class="cta">
+            <a class="btn" href="#proyectos" id="ctaProjects" data-i18n="btn_projects">Ver proyectos</a>
+            <a class="btn contact" href="#contacto" id="ctaContact" data-i18n="btn_contact">Contactar</a>
+          </div>
+
+          <div class="chips" aria-label="Technical highlights" id="chips"></div>
+
+          <div class="section-title" style="margin-top: 16px;">
+            <h2 id="focusTitle" data-i18n="links_title">Links</h2>
+            <span class="hint" id="focusHint" data-i18n="links_hint">Profiles & CV</span>
+          </div>
+
+          <div class="cta">
+            <a class="btn" href="https://www.linkedin.com/in/mariasalashh/" id="linkedinLink" target="_blank"
+              rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://github.com/mariasalashh" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://mariasalashh.wixsite.com/maria-sala" target="_blank"
+              rel="noopener">Portfolio</a>
+          </div>
+        </div>
+
+        <aside class="card pad" aria-label="Quick overview">
+          <div class="section-title">
+            <h2 id="quickTitle" data-i18n="quick_title">Resumen</h2>
+            <span class="hint" id="quickHint" data-i18n="quick_hint">At a glance</span>
+          </div>
+
+          <div class="kvs">
+            <div class="kv"><span data-i18n="kv_location">Ubicación</span><b data-i18n="kv_location_val">Perth, WA</b>
+            </div>
+            <div class="kv"><span data-i18n="kv_focus">Enfoque</span><b data-i18n="kv_focus_val">SOC · Incident
+                Response</b></div>
+            <div class="kv"><span data-i18n="kv_email">Email</span><b class="mono">mariasalashh@gmail.com</b></div>
+            <div class="kv"><span data-i18n="kv_phone">Teléfono</span><b class="mono">+61 04 93 583 554</b></div>
+            <div class="kv"><span data-i18n="kv_langs">Idiomas</span><b data-i18n="kv_langs_val">ES (Native) · EN (C1) ·
+                PT (C2)</b></div>
+          </div>
+
+          <p class="faint" id="quickNote" data-i18n="quick_note" style="margin: 12px 0 0; line-height:1.5;">
+            Structured reporting and clear communication with both technical and non-technical stakeholders.
+          </p>
+
+          <!-- removed: copy email + email buttons (per your request) -->
+        </aside>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <div class="card pad">
+          <div class="section-title">
+            <h2 data-i18n="skills_title">Skills</h2>
+            <span class="hint" data-i18n="skills_hint">Core competencies aligned with SOC workflows.</span>
+          </div>
+
+          <div class="grid two">
+            <div class="item">
+              <h3 style="margin:0;font-size:14px;" data-i18n="skills_cyber_title">Cybersecurity & SOC</h3>
+              <p class="muted" style="margin:8px 0 0; line-height:1.6;" data-i18n="skills_cyber_body">
+                Incident response (SOC workflows), phishing & brute-force analysis, log monitoring, alert triage, access
+                control, incident reporting, basic threat investigation, containment & remediation.
+              </p>
+            </div>
+
+            <div class="item">
+              <h3 style="margin:0;font-size:14px;" data-i18n="skills_it_title">IT & Systems</h3>
+              <p class="muted" style="margin:8px 0 0; line-height:1.6;" data-i18n="skills_it_body">
+                Windows/macOS/Linux, Microsoft 365 & Active Directory, networking (TCP/IP, DNS, VPN), ITSM,
+                troubleshooting, system configuration & maintenance.
+              </p>
+            </div>
+
+            <div class="item">
+              <h3 style="margin:0;font-size:14px;" data-i18n="skills_ai_title">Artificial Intelligence</h3>
+              <p class="muted" style="margin:8px 0 0; line-height:1.6;" data-i18n="skills_ai_body">
+                Applied AI fundamentals, data analysis, automation, AI tools, data-driven problem solving.
+              </p>
+            </div>
+
+            <div class="item">
+              <h3 style="margin:0;font-size:14px;" data-i18n="skills_lang_title">Languages</h3>
+              <p class="muted" style="margin:8px 0 0; line-height:1.6;" data-i18n="skills_lang_body">
+                Spanish (Native), English (C1), Portuguese (C2).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="proyectos">
+      <div class="container">
+        <div class="card pad">
+          <div class="section-title">
+            <h2 data-i18n="projects_title">Proyectos</h2>
+            <span class="hint" data-i18n="projects_hint">Selected work aligned with defensive security and operational
+              analysis.</span>
+          </div>
+
+          <div class="proj-grid">
+            <article class="item proj">
+              <h3 data-i18n="p1_title">Segmented Smart Home Security Infrastructure (Master’s Final Project)</h3>
+              <p data-i18n="p1_body">
+                Design and implementation of a segmented smart home infrastructure focused on secure architecture,
+                network segmentation, isolation, monitoring and access control to protect IoT environments.
+              </p>
+              <div class="meta">
+                <span class="tag mono"><b data-i18n="tag_network">Network</b></span>
+                <span class="tag mono"><b>IoT</b></span>
+                <span class="tag mono"><b data-i18n="tag_defense">Defense</b></span>
+              </div>
+              <div class="actions">
+                <a class="btn" href="#" target="_blank" rel="noopener" data-i18n="btn_repo">Repo</a>
+              </div>
+            </article>
+
+            <article class="item proj">
+              <h3 data-i18n="p2_title">SOC Case Studies (Detection · Triage · Response)</h3>
+              <p data-i18n="p2_body">
+                SOC-style scenarios including phishing attempts, authentication attacks and suspicious network activity,
+                following a workflow: detection, triage, analysis, containment and remediation.
+              </p>
+              <div class="meta">
+                <span class="tag mono"><b>SOC</b></span>
+                <span class="tag mono"><b data-i18n="tag_ir">IR</b></span>
+                <span class="tag mono"><b data-i18n="tag_reporting">Reporting</b></span>
+              </div>
+              <div class="actions">
+                <a class="btn" href="#" target="_blank" rel="noopener" data-i18n="btn_repo">Repo</a>
+              </div>
+            </article>
+
+            <article class="item proj">
+              <h3 data-i18n="p3_title">AI SOC Agent – Automated Security Log Analysis</h3>
+              <p data-i18n="p3_body">
+                AI-driven SOC agent that analyzes system logs, detects brute-force and web application attacks, extracts
+                Indicators of Compromise (IOCs), and generates automated SOC-style incident reports. Demonstrates AI
+                automation, prompt engineering, and Blue Team cybersecurity workflows.
+              </p>
+              <div class="meta">
+                <span class="tag mono"><b data-i18n="tag_ai">AI</b></span>
+                <span class="tag mono"><b data-i18n="tag_soc">SOC</b></span>
+                <span class="tag mono"><b data-i18n="tag_blue_team">Blue Team</b></span>
+                <span class="tag mono"><b data-i18n="tag_automation">Automation</b></span>
+              </div>
+              <div class="actions">
+                <a class="btn" href="https://github.com/mariasalashh/ai-soc-agent" target="_blank" rel="noopener"
+                  data-i18n="btn_repo">Repo</a>
+              </div>
+            </article>
+          </div>
+
+          <p class="faint" style="margin: 12px 0 0; line-height:1.5;" data-i18n="projects_note">
+
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experiencia">
+      <div class="container">
+        <div class="card pad">
+          <div class="section-title">
+            <h2 data-i18n="exp_title">Experiencia</h2>
+            <span class="hint" data-i18n="exp_hint">Operational, investigative and technical background.</span>
+          </div>
+
+          <div class="list">
+            <div class="item">
+              <div class="tag mono"><b data-i18n="exp0_date">Jan 2026 - Present</b> · <span
+                  data-i18n="exp0_company">Personal Projects · Freelance</span></div>
+              <p class="muted" style="margin:10px 0 0; line-height:1.6;">
+                <span data-i18n="exp0_title">Cybersecurity & AI Automation Developer</span><br>
+                <span data-i18n="exp0_location">Perth, Western Australia, Australia · Remote</span><br><br>
+                <span data-i18n="exp0_body">
+                  Cybersecurity and Artificial Intelligence student and practitioner with hands-on experience in SOC
+                  operations, Blue Team methodologies, and AI-driven security automation.
+                  Designed and implemented security projects focused on log analysis, incident detection, and automated
+                  reporting using AI and scripting tools. Developed an AI SOC Agent capable of identifying brute-force
+                  attacks, web application threats, and extracting Indicators of Compromise (IOCs).
+                  Currently completing a Diploma in Artificial Intelligence in Australia while pursuing advanced
+                  cybersecurity studies. Strong foundation in networking, system administration, and security
+                  monitoring, with practical labs in pfSense, SIEM, and automation workflows.
+                  Key interests: SOC analysis, incident response, security engineering, and AI automation applied to
+                  cybersecurity.
+                </span>
+                <br><br>
+                <span data-i18n="exp0_portfolio_label">Portfolio</span>:
+                <a href="https://mariasalashh.github.io" target="_blank" rel="noopener">mariasalashh.github.io</a>
+              </p>
+            </div>
+            <div class="item">
+              <div class="tag mono"><b data-i18n="exp1_date">2007 - 2025</b> · <span data-i18n="exp1_company">National
+                  Police of Spain</span></div>
+              <p class="muted" style="margin:10px 0 0; line-height:1.6;">
+                <span data-i18n="exp1_title">Detective</span><br><br>
+                <span data-i18n="exp1_body"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="educacion">
+      <div class="container">
+        <div class="card pad">
+          <div class="section-title">
+            <h2 data-i18n="edu_title">Educación</h2>
+            <span class="hint" data-i18n="edu_hint">Academic training and specialization.</span>
+          </div>
+
+          <div class="list">
+            <div class="item">
+              <div class="tag mono"><b>2025 - 2026</b> · <span data-i18n="edu1_title">Diploma of Artificial
+                  Intelligence</span></div>
+              <p class="muted" style="margin:10px 0 0;" data-i18n="edu1_body">Greystone College, Australia (in progress)
+              </p>
+            </div>
+
+            <div class="item">
+              <div class="tag mono"><b data-i18n="edu2_title">Master’s Degree in Cybersecurity</b></div>
+              <p class="muted" style="margin:10px 0 0;" data-i18n="edu2_body">
+                UNIR University, Spain. Focus on network security, incident response, security auditing and cyber threat
+                analysis. Master’s Final Project: segmented smart home infrastructure (assessment expected March 2026).
+              </p>
+            </div>
+
+            <div class="item">
+              <div class="tag mono"><b data-i18n="edu3_title">Bachelor’s Degree in Criminology (Cybercrime
+                  specialization)</b></div>
+              <p class="muted" style="margin:10px 0 0;" data-i18n="edu3_body">UEMC University, Spain.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certificaciones">
+      <div class="container">
+        <div class="card pad">
+          <div class="section-title">
+            <h2 data-i18n="certs_title">Certificaciones</h2>
+            <span class="hint" data-i18n="certs_hint">Verifiable credentials.</span>
+          </div>
+
+          <div class="list" id="certList"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contacto">
+      <div class="container">
+        <div class="card pad">
+          <div class="section-title">
+            <h2 data-i18n="contact_title">Contacto</h2>
+            <span class="hint" data-i18n="contact_hint">Let’s talk.</span>
+          </div>
+
+          <div class="grid two">
+            <div class="item">
+              <h3 style="margin:0;font-size:14px;" data-i18n="contact_cta_title"></h3>
+              <p class="muted" style="margin:10px 0 0; line-height:1.6;" data-i18n="contact_cta_body">
+                For professional enquiries and further information, contact me.
+              </p>
+              <div class="cta" style="margin-top: 12px;">
+                <!-- ONLY contact button -->
+                <a class="btn contact" id="contactBtn" href="mailto:mariasalashh@gmail.com"
+                  data-i18n="btn_contact">Contactar</a>
+              </div>
+            </div>
+
+            <div class="item">
+              <h3 style="margin:0;font-size:14px;" data-i18n="contact_details_title">Details</h3>
+              <p class="muted" style="margin:10px 0 0;"><span class="mono">mariasalashh@gmail.com</span></p>
+              <p class="muted" style="margin:8px 0 0;"><span class="mono">+61 04 93 583 554</span></p>
+              <p class="muted" style="margin:8px 0 0;" data-i18n="contact_location">Perth, Western Australia</p>
             </div>
           </div>
 
-          <canvas class="snake-canvas" id="snakeCanvas" width="360" height="360" aria-label="Snake game"></canvas>
-
-          <p class="faint" id="snakeStatus" style="margin:0;" data-i18n="game_status_ready">Pulsa iniciar para jugar.</p>
-          <p class="faint" style="margin:0;" data-i18n="game_controls">Controles: flechas o WASD.</p>
+          <p class="faint" style="margin: 12px 0 0;">© <span id="year"></span> Maria Sala</p>
         </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
 
-<script>
-  // ---------- Theme ----------
-  (function initTheme(){
-    const saved = localStorage.getItem("theme");
-    const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
-    const theme = saved || (prefersLight ? "light" : "dark");
-    document.documentElement.setAttribute("data-theme", theme);
-    document.getElementById("themeIcon").textContent = theme === "light" ? "☼" : "◐";
-  })();
+    <footer>
+      <div class="container" style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+        <span data-i18n="footer_left">Single-file HTML · GitHub Pages</span>
+        <span class="mono">mariasalashh.github.io</span>
+      </div>
+    </footer>
 
-  document.getElementById("themeBtn").addEventListener("click", () => {
-    const cur = document.documentElement.getAttribute("data-theme") || "dark";
-    const next = (cur === "dark") ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", next);
-    localStorage.setItem("theme", next);
-    document.getElementById("themeIcon").textContent = next === "light" ? "☼" : "◐";
-  });
+    <hr class="divider" aria-hidden="true" />
+    <!-- GAME -->
+    <section id="juego">
+      <div class="container">
+        <div class="card pad">
+          <div class="section-title">
+            <h2 data-i18n="game_title">Snake clásico</h2>
+            <span class="hint" data-i18n="game_hint">Come y crece</span>
+          </div>
+          <p class="faint" style="margin:0 0 8px;" data-i18n="game_subtitle">Easter egg</p>
 
-  // ---------- i18n ----------
-  let lang = localStorage.getItem("lang") || "es";
-  const langBtn = document.getElementById("langBtn");
-  const langLabel = document.getElementById("langLabel");
+          <div class="snake">
+            <p class="muted" style="margin:0; line-height:1.6; text-align:center;" data-i18n="game_desc">
+              Muévete, recoge la comida y evita chocar con el borde o contigo.
+            </p>
 
-  const I18N = {
-    es: {
-      brand_line: "Ciberseguridad · SOC y Respuesta a Incidentes · Automatización de IA · Situada en Perth, Australia",
+            <div class="snake-top">
+              <div class="mono" id="snakeScore" data-i18n="game_score">Puntos: 0</div>
+              <div class="actions">
+                <button class="btn" id="snakeStart" type="button" data-i18n="game_start">Iniciar</button>
+                <button class="btn" id="snakePause" type="button" data-i18n="game_pause">Pausa</button>
+                <button class="btn" id="snakeReset" type="button" data-i18n="game_reset">Reiniciar</button>
+              </div>
+            </div>
 
-      nav_profile: "Perfil",
-      nav_skills: "Skills",
-      nav_projects: "Proyectos",
-      nav_experience: "Experiencia",
-      nav_education: "Educación",
-      nav_certs: "Certificaciones",
-      nav_contact: "Contacto",
+            <canvas class="snake-canvas" id="snakeCanvas" width="360" height="360" aria-label="Snake game"></canvas>
 
-      btn_lang: "Modo",
-      btn_theme: "Tema",
-      btn_contact: "Contactar",
-      btn_projects: "Ver proyectos",
-      btn_cv: "Descargar CV",
-      btn_repo: "Repo",
+            <p class="faint" id="snakeStatus" style="margin:0;" data-i18n="game_status_ready">Pulsa iniciar para jugar.
+            </p>
+            <p class="faint" style="margin:0;" data-i18n="game_controls">Controles: flechas o WASD.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-      hero_loc: "Perth, Australia · Remoto",
-      hero_role: "Security Analyst | SOC y Respuesta a Incidentes | IA y Operaciones IT",
-      hero_summary:
-        "Analista de ciberseguridad con sólida base operativa en análisis, monitorización y respuesta a incidentes estilo SOC, respaldada por más de 10 años de experiencia en operaciones IT y entornos técnicos.",
+  <script>
+    // ---------- Theme ----------
+    (function initTheme() {
+      const saved = localStorage.getItem("theme");
+      const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+      const theme = saved || (prefersLight ? "light" : "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+      document.getElementById("themeIcon").textContent = theme === "light" ? "☼" : "◐";
+    })();
 
-      links_title: "Links",
-      links_hint: "Perfiles y CV",
-
-      quick_title: "Resumen",
-      quick_hint: "Vista rápida",
-      kv_location: "Ubicación",
-      kv_location_val: "Perth, WA",
-      kv_focus: "Enfoque",
-      kv_focus_val: "SOC · Respuesta a Incidentes",
-      kv_email: "Email",
-      kv_phone: "Teléfono",
-      kv_langs: "Idiomas",
-      kv_langs_val: "ES (Nativa) · EN (C1) · PT (C2)",
-      quick_note: "Elaboro informes estructurados y accionables que traducen hallazgos técnicos a impacto de negocio. Me comunico con eficacia con perfiles técnicos y no técnicos, alineo riesgo y prioridades, y apoyo la toma de decisiones durante la respuesta a incidentes y el trabajo operativo.",
-
-      skills_title: "Skills",
-      skills_hint: "Competencias clave alineadas con flujos SOC.",
-      skills_cyber_title: "Ciberseguridad y SOC",
-      skills_cyber_body:
-        "Respuesta a incidentes (flujos SOC), análisis de phishing y fuerza bruta, monitorización de logs, triage de alertas, control de acceso, reporting de incidentes, investigación básica de amenazas, contención y remediación.",
-      skills_it_title: "IT y Sistemas",
-      skills_it_body:
-        "Windows/macOS/Linux, Microsoft 365 y Active Directory, redes (TCP/IP, DNS, VPN), ITSM, troubleshooting, configuración y mantenimiento de sistemas.",
-      skills_ai_title: "Inteligencia Artificial",
-      skills_ai_body:
-        "Fundamentos de IA aplicada, análisis de datos, automatización, herramientas de IA y resolución de problemas basada en datos.",
-      skills_lang_title: "Idiomas",
-      skills_lang_body: "Español (Nativa), Inglés (C1), Portugués (C2).",
-
-      projects_title: "Proyectos",
-      projects_hint: "Trabajo seleccionado alineado con seguridad defensiva y análisis operativo.",
-      p1_title: "Infraestructura de seguridad para Smart Home segmentado (TFM)",
-      p1_body:
-        "Diseño e implementación de una infraestructura domótica segmentada centrada en arquitectura segura, segmentación de red, aislamiento, monitorización y control de acceso para proteger entornos IoT.",
-      p2_title: "Casos SOC (Detección · Triage · Respuesta)",
-      p2_body:
-        "Escenarios estilo SOC: intentos de phishing, ataques de autenticación y actividad de red sospechosa, siguiendo el flujo: detección, triage, análisis, contención y remediación.",
-      p3_title: "AI SOC Agent – Análisis automatizado de logs de seguridad",
-      p3_body:
-        "Agente SOC impulsado por IA que analiza logs del sistema, detecta ataques de fuerza bruta y web, extrae Indicadores de Compromiso (IOCs) y genera informes automáticos estilo SOC. Demuestra automatización con IA, prompt engineering y análisis defensivo Blue Team.",
-
-      tag_network: "Red",
-      tag_defense: "Defensiva",
-      tag_ir: "IR",
-      tag_reporting: "Reporting",
-      tag_ai: "IA",
-      tag_soc: "SOC",
-      tag_blue_team: "Blue Team",
-      tag_automation: "Automatización",
-
-      exp_title: "Experiencia",
-      exp_hint: "Trayectoria operativa, investigadora y técnica.",
-      exp0_date: "ene. 2026 - actualidad",
-      exp0_company: "Proyectos Personales · Profesional independiente",
-      exp0_title: "Desarrolladora de Ciberseguridad y Automatización con IA",
-      exp0_location: "Perth, Australia Occidental, Australia · En remoto",
-      exp0_body:
-        "Estudiante y profesional en Ciberseguridad e Inteligencia Artificial con experiencia práctica en operaciones SOC, metodologías Blue Team y automatización de seguridad basada en IA. Diseño e implementación de proyectos de seguridad centrados en análisis de logs, detección de incidentes y generación automática de informes mediante IA y scripting. Desarrollo de un agente SOC con IA capaz de identificar ataques de fuerza bruta, amenazas web y extraer Indicadores de Compromiso (IOCs). Actualmente cursando un Diploma en Inteligencia Artificial en Australia mientras continúo estudios avanzados en ciberseguridad. Sólida base en redes, administración de sistemas y monitorización de seguridad, con laboratorios prácticos en pfSense, SIEM y automatización. Intereses clave: análisis SOC, respuesta a incidentes, ingeniería de seguridad y automatización con IA aplicada a ciberseguridad.",
-      exp0_portfolio_label: "Portfolio",
-      exp1_company: "Policía Nacional de España (Servicios Centrales)",
-      exp1_body:
-        "Rol de Analista de Ciberseguridad / IT: asistencia técnica y troubleshooting, gestión de accesos, configuración de sistemas, participación en identificación, análisis y respuesta a incidentes, monitorización de sistemas y logs, documentación de SOPs y colaboración para mantener operaciones seguras y estables.",
-      exp2_company: "Policía Nacional de España (Operaciones IT)",
-      exp2_body:
-        "Analista de redes / soporte IT: resolución de incidencias de hardware/software/accesos, apoyo en configuración y administración, participación en identificación y respuesta a incidentes, monitorización de sistemas y logs para detectar anomalías, aplicación de buenas prácticas y documentación de incidencias y procedimientos.",
-      exp3_company: "Policía Nacional de España",
-      exp3_body:
-        "Policía Nacional destinada en roles operativos, investigativos y técnicos, incluyendo investigaciones criminales, gestión de evidencias, investigaciones de cibercrimen; soporte como analista IT y de ciberseguridad en entornos conectados.",
-
-      edu_title: "Educación",
-      edu_hint: "Formación académica y especialización.",
-      edu1_title: "Diploma of Artificial Intelligence",
-      edu1_body: "Greystone College, Australia (en curso)",
-      edu2_title: "Máster en Ciberseguridad",
-      edu2_body:
-        "UNIR University, España. TFM: Diseño e implementación de una infraestructura domótica segmentada.",
-      edu3_title: "Grado en Criminología (especialidad en Cibercriminalidad)",
-      edu3_body: "UEMC University, España.",
-
-      certs_title: "Certificaciones",
-      certs_hint: "Credenciales verificables.",
-
-      contact_title: "Contacto",
-      contact_hint: "Hablemos.",
-      contact_cta_body: "Para consultas profesionales o más información, escríbeme.",
-      contact_details_title: "Detalles",
-      contact_location: "Perth, Western Australia",
-
-      footer_left: "Single-file HTML · GitHub Pages",
-
-      game_title: "Snake clásico",
-      game_hint: "Come y crece",
-      game_desc: "Muévete, recoge la comida y evita chocar con el borde o contigo.",
-      game_subtitle: "Easter egg",
-      game_score: "Puntos: 0",
-      game_start: "Iniciar",
-      game_pause: "Pausa",
-      game_reset: "Reiniciar",
-      game_status_ready: "Pulsa iniciar para jugar.",
-      game_controls: "Controles: flechas o WASD."
-    },
-
-    en: {
-      brand_line: "Cybersecurity · SOC & Incident Response · AI Automation · Based in Perth, Australia",
-
-      nav_profile: "Profile",
-      nav_skills: "Skills",
-      nav_projects: "Projects",
-      nav_experience: "Experience",
-      nav_education: "Education",
-      nav_certs: "Certifications",
-      nav_contact: "Contact",
-
-      btn_lang: "Mode",
-      btn_theme: "Theme",
-      btn_contact: "Contact",
-      btn_projects: "View projects",
-      btn_cv: "Download CV",
-      btn_repo: "Repo",
-
-      hero_loc: "Perth, Australia · Remote-ready",
-      hero_role: "Security Analyst | SOC & Incident Response | AI & IT Operations",
-      hero_summary:
-        "Cybersecurity Analyst with a strong operational background in SOC-style incident analysis, monitoring and response, supported by over 10 years of experience in IT operations and technical environments.",
-
-      links_title: "Links",
-      links_hint: "Profiles & CV",
-
-      quick_title: "Snapshot",
-      quick_hint: "At a glance",
-      kv_location: "Location",
-      kv_location_val: "Perth, WA",
-      kv_focus: "Focus",
-      kv_focus_val: "SOC · Incident Response",
-      kv_email: "Email",
-      kv_phone: "Phone",
-      kv_langs: "Languages",
-      kv_langs_val: "ES (Native) · EN (C1) · PT (C2)",
-      quick_note: "I produce structured, actionable reports that translate technical findings into clear business impact. I communicate effectively with both technical and non-technical stakeholders, align on risk and priority, and support decision-making during incident response and operational work.",
-
-      skills_title: "Skills",
-      skills_hint: "Core competencies aligned with SOC workflows.",
-      skills_cyber_title: "Cybersecurity & SOC",
-      skills_cyber_body:
-        "Incident response (SOC workflows), phishing & brute-force analysis, log monitoring, alert triage, access control, incident reporting, basic threat investigation, containment & remediation.",
-      skills_it_title: "IT & Systems",
-      skills_it_body:
-        "Windows/macOS/Linux, Microsoft 365 & Active Directory, networking (TCP/IP, DNS, VPN), ITSM, troubleshooting, system configuration & maintenance.",
-      skills_ai_title: "Artificial Intelligence",
-      skills_ai_body:
-        "Applied AI fundamentals, data analysis, automation, AI tools, data-driven problem solving.",
-      skills_lang_title: "Languages",
-      skills_lang_body: "Spanish (Native), English (C1), Portuguese (C2).",
-
-      projects_title: "Projects",
-      projects_hint: "Selected work aligned with defensive security and operational analysis.",
-      p1_title: "Segmented Smart Home Security Infrastructure (Master’s Final Project)",
-      p1_body:
-        "Design and implementation of a segmented smart home infrastructure focused on secure architecture, network segmentation, isolation, monitoring and access control to protect IoT environments.",
-      p2_title: "SOC Case Studies (Detection · Triage · Response)",
-      p2_body:
-        "SOC-style scenarios including phishing attempts, authentication attacks and suspicious network activity, following a workflow: detection, triage, analysis, containment and remediation.",
-      p3_title: "AI SOC Agent – Automated Security Log Analysis",
-      p3_body:
-        "AI-driven SOC agent that analyzes system logs, detects brute-force and web application attacks, extracts Indicators of Compromise (IOCs), and generates automated SOC-style incident reports. Demonstrates AI automation, prompt engineering, and Blue Team cybersecurity workflows.",
-
-      tag_network: "Network",
-      tag_defense: "Defense",
-      tag_ir: "IR",
-      tag_reporting: "Reporting",
-      tag_ai: "AI",
-      tag_soc: "SOC",
-      tag_blue_team: "Blue Team",
-      tag_automation: "Automation",
-
-      exp_title: "Experience",
-      exp_hint: "Operational, investigative and technical background.",
-      exp0_date: "Jan 2026 - Present",
-      exp0_company: "Personal Projects · Freelance",
-      exp0_title: "Cybersecurity & AI Automation Developer",
-      exp0_location: "Perth, Western Australia, Australia · Remote",
-      exp0_body:
-        "Cybersecurity and Artificial Intelligence student and practitioner with hands-on experience in SOC operations, Blue Team methodologies, and AI-driven security automation. Designed and implemented security projects focused on log analysis, incident detection, and automated reporting using AI and scripting tools. Developed an AI SOC Agent capable of identifying brute-force attacks, web application threats, and extracting Indicators of Compromise (IOCs). Currently completing a Diploma in Artificial Intelligence in Australia while pursuing advanced cybersecurity studies. Strong foundation in networking, system administration, and security monitoring, with practical labs in pfSense, SIEM, and automation workflows. Key interests: SOC analysis, incident response, security engineering, and AI automation applied to cybersecurity.",
-      exp0_portfolio_label: "Portfolio",
-      exp1_company: "Spanish National Police (Police Headquarters)",
-      exp1_body:
-        "Cybersecurity / IT Analyst role: technical assistance and troubleshooting, user access management, system configuration, participation in incident identification, analysis and response activities, monitoring systems and logs, documentation of SOPs, and collaboration to maintain secure and stable operations.",
-      exp2_company: "Spanish National Police (IT Operations)",
-      exp2_body:
-        "Network Analyst / IT support in operational environments: resolving hardware/software/access issues, assisting with configuration and administration, participating in incident identification and response, monitoring systems and logs to detect anomalies, applying security best practices, and documenting incidents and procedures.",
-      exp3_company: "Spanish National Police",
-      exp3_body:
-        "Law Enforcement Officer across operational, investigative and technical roles, including criminal investigations, evidence management, cybercrime investigations; support as IT and cybersecurity analyst in networked environments.",
-
-      edu_title: "Education",
-      edu_hint: "Academic training and specialization.",
-      edu1_title: "Diploma of Artificial Intelligence",
-      edu1_body: "Greystone College, Australia (in progress)",
-      edu2_title: "Master’s Degree in Cybersecurity",
-      edu2_body:
-        "UNIR University, Spain. Master’s Final Project: segmented smart home infrastructure.",
-      edu3_title: "Bachelor’s Degree in Criminology (Cybercrime specialization)",
-      edu3_body: "UEMC University, Spain.",
-
-      certs_title: "Certifications",
-      certs_hint: "Verifiable credentials.",
-
-      contact_title: "Contact",
-      contact_hint: "Let’s talk.",
-      contact_cta_body: "For professional enquiries and further information, contact me.",
-      contact_details_title: "Details",
-      contact_location: "Perth, Western Australia",
-
-      footer_left: "Single-file HTML · GitHub Pages",
-
-      game_title: "Classic Snake",
-      game_hint: "Eat and grow",
-      game_desc: "Move, collect food, and avoid hitting the walls or yourself.",
-      game_subtitle: "Easter egg",
-      game_score: "Score: 0",
-      game_start: "Start",
-      game_pause: "Pause",
-      game_reset: "Reset",
-      game_status_ready: "Press start to play.",
-      game_controls: "Controls: arrows or WASD."
-    }
-  };
-
-  const SNAKE_MSG = {
-    es: {
-      ready: "Pulsa iniciar para jugar.",
-      running: "En juego.",
-      paused: "Pausa.",
-      over: "Game over. Pulsa reiniciar."
-    },
-    en: {
-      ready: "Press start to play.",
-      running: "Playing.",
-      paused: "Paused.",
-      over: "Game over. Press reset."
-    }
-  };
-
-  const CHIPS = {
-    es: ["Flujos SOC", "Respuesta a Incidentes", "Phishing", "Triage de alertas", "Monitorización de logs", "Operaciones IT", "IA & Automatización"],
-    en: ["SOC Workflows", "Incident Response", "Phishing", "Alert triage", "Log monitoring", "IT Operations", "AI & Automation"]
-  };
-
-  // Certifications (with your dates)
-  const CERTIFICATIONS = [
-    { date_es: "30/07/2025", date_en: "30 Jul 2025", issuer: "Microsoft", title_es: "Microsoft Azure Fundamentals (AZ-900)", title_en: "Microsoft Azure Fundamentals (AZ-900)" },
-    { date_es: "21/08/2025", date_en: "21 Aug 2025", issuer: "Google", title_es: "Google Cybersecurity Certificate", title_en: "Google Cybersecurity Certificate" }
-  ];
-
-  function applyI18n(){
-    const dict = I18N[lang] || I18N.es;
-
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      if (dict[key]) el.textContent = dict[key];
+    document.getElementById("themeBtn").addEventListener("click", () => {
+      const cur = document.documentElement.getAttribute("data-theme") || "dark";
+      const next = (cur === "dark") ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      document.getElementById("themeIcon").textContent = next === "light" ? "☼" : "◐";
     });
 
-    // Render chips
-    const chipsWrap = document.getElementById("chips");
-    const chips = CHIPS[lang] || CHIPS.es;
-    chipsWrap.innerHTML = chips.map(t => `<span class="chip mono">${escapeHtml(t)}</span>`).join("");
+    // ---------- i18n ----------
+    let lang = localStorage.getItem("lang") || "es";
+    const langBtn = document.getElementById("langBtn");
+    const langLabel = document.getElementById("langLabel");
 
-    // Render certifications
-    const certWrap = document.getElementById("certList");
-    certWrap.innerHTML = CERTIFICATIONS.map(c => {
-      const date = (lang === "es") ? c.date_es : c.date_en;
-      const title = (lang === "es") ? c.title_es : c.title_en;
-      return `
+    const I18N = {
+      es: {
+        brand_line: "Ciberseguridad · SOC y Respuesta a Incidentes · Automatización de IA · Situada en Perth, Australia",
+
+        nav_profile: "Perfil",
+        nav_skills: "Skills",
+        nav_projects: "Proyectos",
+        nav_experience: "Experiencia",
+        nav_education: "Educación",
+        nav_certs: "Certificaciones",
+        nav_contact: "Contacto",
+
+        btn_lang: "Modo",
+        btn_theme: "Tema",
+        btn_contact: "Contactar",
+        btn_projects: "Ver proyectos",
+        btn_cv: "Descargar CV",
+        btn_repo: "Repo",
+
+        hero_loc: "Perth, Australia · Remoto",
+        hero_role: "Security Analyst | SOC y Respuesta a Incidentes | IA y Operaciones IT",
+        hero_summary:
+          "Analista de ciberseguridad con sólida base operativa en análisis, monitorización y respuesta a incidentes estilo SOC, respaldada por más de 10 años de experiencia en operaciones IT y entornos técnicos.",
+
+        links_title: "Links",
+        links_hint: "Perfiles y CV",
+
+        quick_title: "Resumen",
+        quick_hint: "Vista rápida",
+        kv_location: "Ubicación",
+        kv_location_val: "Perth, WA",
+        kv_focus: "Enfoque",
+        kv_focus_val: "SOC · Respuesta a Incidentes",
+        kv_email: "Email",
+        kv_phone: "Teléfono",
+        kv_langs: "Idiomas",
+        kv_langs_val: "ES (Nativa) · EN (C1) · PT (C2)",
+        quick_note: "Elaboro informes estructurados y accionables que traducen hallazgos técnicos a impacto de negocio. Me comunico con eficacia con perfiles técnicos y no técnicos, alineo riesgo y prioridades, y apoyo la toma de decisiones durante la respuesta a incidentes y el trabajo operativo.",
+
+        skills_title: "Skills",
+        skills_hint: "Competencias clave alineadas con flujos SOC.",
+        skills_cyber_title: "Ciberseguridad y SOC",
+        skills_cyber_body:
+          "Respuesta a incidentes (flujos SOC), análisis de phishing y fuerza bruta, monitorización de logs, triage de alertas, control de acceso, reporting de incidentes, investigación básica de amenazas, contención y remediación.",
+        skills_it_title: "IT y Sistemas",
+        skills_it_body:
+          "Windows/macOS/Linux, Microsoft 365 y Active Directory, redes (TCP/IP, DNS, VPN), ITSM, troubleshooting, configuración y mantenimiento de sistemas.",
+        skills_ai_title: "Inteligencia Artificial",
+        skills_ai_body:
+          "Fundamentos de IA aplicada, análisis de datos, automatización, herramientas de IA y resolución de problemas basada en datos.",
+        skills_lang_title: "Idiomas",
+        skills_lang_body: "Español (Nativa), Inglés (C1), Portugués (C2).",
+
+        projects_title: "Proyectos",
+        projects_hint: "Trabajo seleccionado alineado con seguridad defensiva y análisis operativo.",
+        p1_title: "Infraestructura de seguridad para Smart Home segmentado (TFM)",
+        p1_body:
+          "Diseño e implementación de una infraestructura domótica segmentada centrada en arquitectura segura, segmentación de red, aislamiento, monitorización y control de acceso para proteger entornos IoT.",
+        p2_title: "Casos SOC (Detección · Triage · Respuesta)",
+        p2_body:
+          "Escenarios estilo SOC: intentos de phishing, ataques de autenticación y actividad de red sospechosa, siguiendo el flujo: detección, triage, análisis, contención y remediación.",
+        p3_title: "AI SOC Agent – Análisis automatizado de logs de seguridad",
+        p3_body:
+          "Agente SOC impulsado por IA que analiza logs del sistema, detecta ataques de fuerza bruta y web, extrae Indicadores de Compromiso (IOCs) y genera informes automáticos estilo SOC. Demuestra automatización con IA, prompt engineering y análisis defensivo Blue Team.",
+
+        tag_network: "Red",
+        tag_defense: "Defensiva",
+        tag_ir: "IR",
+        tag_reporting: "Reporting",
+        tag_ai: "IA",
+        tag_soc: "SOC",
+        tag_blue_team: "Blue Team",
+        tag_automation: "Automatización",
+
+        exp_title: "Experiencia",
+        exp_hint: "Trayectoria operativa, investigadora y técnica.",
+        exp0_date: "ene. 2026 - actualidad",
+        exp0_company: "Proyectos Personales · Profesional independiente",
+        exp0_title: "Desarrolladora de Ciberseguridad y Automatización con IA",
+        exp0_location: "Perth, Australia Occidental, Australia · En remoto",
+        exp0_body:
+          "Estudiante y profesional en Ciberseguridad e Inteligencia Artificial con experiencia práctica en operaciones SOC, metodologías Blue Team y automatización de seguridad basada en IA. Diseño e implementación de proyectos de seguridad centrados en análisis de logs, detección de incidentes y generación automática de informes mediante IA y scripting. Desarrollo de un agente SOC con IA capaz de identificar ataques de fuerza bruta, amenazas web y extraer Indicadores de Compromiso (IOCs). Actualmente cursando un Diploma en Inteligencia Artificial en Australia mientras continúo estudios avanzados en ciberseguridad. Sólida base en redes, administración de sistemas y monitorización de seguridad, con laboratorios prácticos en pfSense, SIEM y automatización. Intereses clave: análisis SOC, respuesta a incidentes, ingeniería de seguridad y automatización con IA aplicada a ciberseguridad.",
+        exp0_portfolio_label: "Portfolio",
+        exp1_company: "Policía Nacional de España",
+        exp1_title: "Detective",
+        exp1_body:
+          "Extensa trayectoria profesional en entornos policiales y de investigación, desempeñando roles centrados en el análisis operativo, la obtención de inteligencia y la coordinación de incidentes.\n\nResponsabilidades clave:\n\n• Investigación de incidentes y análisis de casos, siguiendo estrictos estándares procedimentales y de evidencia.\n\n• Evaluación de riesgos y amenazas relacionadas con actividades criminales e incidentes de seguridad.\n\n• Gestión de información confidencial y datos sensibles en cumplimiento de marcos legales y regulatorios.\n\n• Apoyo a la toma de decisiones operativas mediante informes estructurados y documentación analítica.\n\n• Colaboración con equipos multidisciplinares en entornos de alta presión y críticos en tiempo.\n\n• Aplicación de metodologías analíticas e investigativas transferibles a operaciones SOC y respuesta a incidentes de ciberseguridad.\n\nEsta formación proporcionó una base sólida en atención al detalle, conciencia situacional, precisión en la documentación y disciplina operativa, lo que respalda directamente mi enfoque actual en roles de Blue Team y SOC.",
+
+        edu_title: "Educación",
+        edu_hint: "Formación académica y especialización.",
+        edu1_title: "Diploma of Artificial Intelligence",
+        edu1_body: "Greystone College, Australia (en curso)",
+        edu2_title: "Máster en Ciberseguridad",
+        edu2_body:
+          "UNIR University, España. TFM: Diseño e implementación de una infraestructura domótica segmentada.",
+        edu3_title: "Grado en Criminología (especialidad en Cibercriminalidad)",
+        edu3_body: "UEMC University, España.",
+
+        certs_title: "Certificaciones",
+        certs_hint: "Credenciales verificables.",
+
+        contact_title: "Contacto",
+        contact_hint: "Hablemos.",
+        contact_cta_body: "Para consultas profesionales o más información, escríbeme.",
+        contact_details_title: "Detalles",
+        contact_location: "Perth, Western Australia",
+
+        footer_left: "Single-file HTML · GitHub Pages",
+
+        game_title: "Snake clásico",
+        game_hint: "Come y crece",
+        game_desc: "Muévete, recoge la comida y evita chocar con el borde o contigo.",
+        game_subtitle: "Easter egg",
+        game_score: "Puntos: 0",
+        game_start: "Iniciar",
+        game_pause: "Pausa",
+        game_reset: "Reiniciar",
+        game_status_ready: "Pulsa iniciar para jugar.",
+        game_controls: "Controles: flechas o WASD."
+      },
+
+      en: {
+        brand_line: "Cybersecurity · SOC & Incident Response · AI Automation · Based in Perth, Australia",
+
+        nav_profile: "Profile",
+        nav_skills: "Skills",
+        nav_projects: "Projects",
+        nav_experience: "Experience",
+        nav_education: "Education",
+        nav_certs: "Certifications",
+        nav_contact: "Contact",
+
+        btn_lang: "Mode",
+        btn_theme: "Theme",
+        btn_contact: "Contact",
+        btn_projects: "View projects",
+        btn_cv: "Download CV",
+        btn_repo: "Repo",
+
+        hero_loc: "Perth, Australia · Remote-ready",
+        hero_role: "Security Analyst | SOC & Incident Response | AI & IT Operations",
+        hero_summary:
+          "Cybersecurity Analyst with a strong operational background in SOC-style incident analysis, monitoring and response, supported by over 10 years of experience in IT operations and technical environments.",
+
+        links_title: "Links",
+        links_hint: "Profiles & CV",
+
+        quick_title: "Snapshot",
+        quick_hint: "At a glance",
+        kv_location: "Location",
+        kv_location_val: "Perth, WA",
+        kv_focus: "Focus",
+        kv_focus_val: "SOC · Incident Response",
+        kv_email: "Email",
+        kv_phone: "Phone",
+        kv_langs: "Languages",
+        kv_langs_val: "ES (Native) · EN (C1) · PT (C2)",
+        quick_note: "I produce structured, actionable reports that translate technical findings into clear business impact. I communicate effectively with both technical and non-technical stakeholders, align on risk and priority, and support decision-making during incident response and operational work.",
+
+        skills_title: "Skills",
+        skills_hint: "Core competencies aligned with SOC workflows.",
+        skills_cyber_title: "Cybersecurity & SOC",
+        skills_cyber_body:
+          "Incident response (SOC workflows), phishing & brute-force analysis, log monitoring, alert triage, access control, incident reporting, basic threat investigation, containment & remediation.",
+        skills_it_title: "IT & Systems",
+        skills_it_body:
+          "Windows/macOS/Linux, Microsoft 365 & Active Directory, networking (TCP/IP, DNS, VPN), ITSM, troubleshooting, system configuration & maintenance.",
+        skills_ai_title: "Artificial Intelligence",
+        skills_ai_body:
+          "Applied AI fundamentals, data analysis, automation, AI tools, data-driven problem solving.",
+        skills_lang_title: "Languages",
+        skills_lang_body: "Spanish (Native), English (C1), Portuguese (C2).",
+
+        projects_title: "Projects",
+        projects_hint: "Selected work aligned with defensive security and operational analysis.",
+        p1_title: "Segmented Smart Home Security Infrastructure (Master’s Final Project)",
+        p1_body:
+          "Design and implementation of a segmented smart home infrastructure focused on secure architecture, network segmentation, isolation, monitoring and access control to protect IoT environments.",
+        p2_title: "SOC Case Studies (Detection · Triage · Response)",
+        p2_body:
+          "SOC-style scenarios including phishing attempts, authentication attacks and suspicious network activity, following a workflow: detection, triage, analysis, containment and remediation.",
+        p3_title: "AI SOC Agent – Automated Security Log Analysis",
+        p3_body:
+          "AI-driven SOC agent that analyzes system logs, detects brute-force and web application attacks, extracts Indicators of Compromise (IOCs), and generates automated SOC-style incident reports. Demonstrates AI automation, prompt engineering, and Blue Team cybersecurity workflows.",
+
+        tag_network: "Network",
+        tag_defense: "Defense",
+        tag_ir: "IR",
+        tag_reporting: "Reporting",
+        tag_ai: "AI",
+        tag_soc: "SOC",
+        tag_blue_team: "Blue Team",
+        tag_automation: "Automation",
+
+        exp_title: "Experience",
+        exp_hint: "Operational, investigative and technical background.",
+        exp0_date: "Jan 2026 - Present",
+        exp0_company: "Personal Projects · Freelance",
+        exp0_title: "Cybersecurity & AI Automation Developer",
+        exp0_location: "Perth, Western Australia, Australia · Remote",
+        exp0_body:
+          "Cybersecurity and Artificial Intelligence student and practitioner with hands-on experience in SOC operations, Blue Team methodologies, and AI-driven security automation. Designed and implemented security projects focused on log analysis, incident detection, and automated reporting using AI and scripting tools. Developed an AI SOC Agent capable of identifying brute-force attacks, web application threats, and extracting Indicators of Compromise (IOCs). Currently completing a Diploma in Artificial Intelligence in Australia while pursuing advanced cybersecurity studies. Strong foundation in networking, system administration, and security monitoring, with practical labs in pfSense, SIEM, and automation workflows. Key interests: SOC analysis, incident response, security engineering, and AI automation applied to cybersecurity.",
+        exp0_portfolio_label: "Portfolio",
+        exp1_company: "National Police of Spain",
+        exp1_title: "Detective",
+        exp1_body:
+          "Extensive professional experience within law enforcement and investigative environments, performing roles focused on operational analysis, intelligence gathering, and incident coordination.\n\nKey responsibilities included:\n\n• Conducting incident investigation and case analysis, following strict procedural and evidentiary standards.\n\n• Performing risk assessment and threat evaluation related to criminal activity and security incidents.\n\n• Managing confidential information and sensitive data in compliance with legal and regulatory frameworks.\n\n• Supporting operational decision-making through structured reporting and analytical documentation.\n\n• Collaborating with multidisciplinary teams in high-pressure, time-critical environments.\n\n• Applying analytical and investigative methodologies transferable to SOC operations and cybersecurity incident response.\n\nThis background provided a strong foundation in attention to detail, situational awareness, documentation accuracy, and operational discipline, which directly supports my current focus on Blue Team and SOC roles.",
+
+        edu_title: "Education",
+        edu_hint: "Academic training and specialization.",
+        edu1_title: "Diploma of Artificial Intelligence",
+        edu1_body: "Greystone College, Australia (in progress)",
+        edu2_title: "Master’s Degree in Cybersecurity",
+        edu2_body:
+          "UNIR University, Spain. Master’s Final Project: segmented smart home infrastructure.",
+        edu3_title: "Bachelor’s Degree in Criminology (Cybercrime specialization)",
+        edu3_body: "UEMC University, Spain.",
+
+        certs_title: "Certifications",
+        certs_hint: "Verifiable credentials.",
+
+        contact_title: "Contact",
+        contact_hint: "Let’s talk.",
+        contact_cta_body: "For professional enquiries and further information, contact me.",
+        contact_details_title: "Details",
+        contact_location: "Perth, Western Australia",
+
+        footer_left: "Single-file HTML · GitHub Pages",
+
+        game_title: "Classic Snake",
+        game_hint: "Eat and grow",
+        game_desc: "Move, collect food, and avoid hitting the walls or yourself.",
+        game_subtitle: "Easter egg",
+        game_score: "Score: 0",
+        game_start: "Start",
+        game_pause: "Pause",
+        game_reset: "Reset",
+        game_status_ready: "Press start to play.",
+        game_controls: "Controls: arrows or WASD."
+      }
+    };
+
+    const SNAKE_MSG = {
+      es: {
+        ready: "Pulsa iniciar para jugar.",
+        running: "En juego.",
+        paused: "Pausa.",
+        over: "Game over. Pulsa reiniciar."
+      },
+      en: {
+        ready: "Press start to play.",
+        running: "Playing.",
+        paused: "Paused.",
+        over: "Game over. Press reset."
+      }
+    };
+
+    const CHIPS = {
+      es: ["Flujos SOC", "Respuesta a Incidentes", "Phishing", "Triage de alertas", "Monitorización de logs", "Operaciones IT", "IA & Automatización"],
+      en: ["SOC Workflows", "Incident Response", "Phishing", "Alert triage", "Log monitoring", "IT Operations", "AI & Automation"]
+    };
+
+    // Certifications (with your dates)
+    const CERTIFICATIONS = [
+      { date_es: "30/07/2025", date_en: "30 Jul 2025", issuer: "Microsoft", title_es: "Microsoft Azure Fundamentals (AZ-900)", title_en: "Microsoft Azure Fundamentals (AZ-900)" },
+      { date_es: "21/08/2025", date_en: "21 Aug 2025", issuer: "Google", title_es: "Google Cybersecurity Certificate", title_en: "Google Cybersecurity Certificate" }
+    ];
+
+    function applyI18n() {
+      const dict = I18N[lang] || I18N.es;
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (dict[key]) el.textContent = dict[key];
+      });
+
+      // Render chips
+      const chipsWrap = document.getElementById("chips");
+      const chips = CHIPS[lang] || CHIPS.es;
+      chipsWrap.innerHTML = chips.map(t => `<span class="chip mono">${escapeHtml(t)}</span>`).join("");
+
+      // Render certifications
+      const certWrap = document.getElementById("certList");
+      certWrap.innerHTML = CERTIFICATIONS.map(c => {
+        const date = (lang === "es") ? c.date_es : c.date_en;
+        const title = (lang === "es") ? c.title_es : c.title_en;
+        return `
         <div class="item">
           <div class="tag mono"><b>${escapeHtml(date)}</b> · ${escapeHtml(c.issuer)}</div>
           <p class="muted" style="margin:10px 0 0; line-height:1.6;">
             <b style="color:var(--text);">${escapeHtml(title)}</b>
           </p>
         </div>`;
-    }).join("");
+      }).join("");
 
-    // Update lang button label
-    langLabel.textContent = (lang === "es") ? "EN" : "ES";
+      // Update lang button label
+      langLabel.textContent = (lang === "es") ? "EN" : "ES";
 
-    // Set <html lang="">
-    document.documentElement.setAttribute("lang", lang);
+      // Set <html lang="">
+      document.documentElement.setAttribute("lang", lang);
 
-    updateSnakeUI();
-  }
-
-  function escapeHtml(str){
-    return String(str)
-      .replaceAll("&","&amp;")
-      .replaceAll("<","&lt;")
-      .replaceAll(">","&gt;")
-      .replaceAll('"',"&quot;")
-      .replaceAll("'","&#039;");
-  }
-
-  function setLang(next){
-    lang = next;
-    localStorage.setItem("lang", lang);
-    applyI18n();
-  }
-
-  langBtn.addEventListener("click", () => setLang(lang === "es" ? "en" : "es"));
-
-  // ---------- Scroll spy ----------
-  const navLinks = Array.from(document.querySelectorAll("nav a[data-link]"));
-  const sections = navLinks.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      const id = e.target.id;
-      navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + id));
-    });
-  }, { threshold: 0.22 });
-
-  sections.forEach(s => observer.observe(s));
-
-  // ---------- Footer year ----------
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  // ---------- CV download ----------
-  const CV_URL = "cv.pdf";
-  const cv = document.getElementById("cvLink");
-  cv.href = CV_URL;
-  cv.setAttribute("download", "Maria-Sala-CV.pdf");
-
-  // ---------- Snake game ----------
-  const snakeCanvas = document.getElementById("snakeCanvas");
-  const snakeCtx = snakeCanvas.getContext("2d");
-  const snakeScore = document.getElementById("snakeScore");
-  const snakeStatus = document.getElementById("snakeStatus");
-  const snakeStart = document.getElementById("snakeStart");
-  const snakePause = document.getElementById("snakePause");
-  const snakeReset = document.getElementById("snakeReset");
-
-  const gridSize = 20;
-  const cellSize = snakeCanvas.width / gridSize;
-  const snakeState = {
-    snake: [],
-    food: { x: 5, y: 5 },
-    dir: { x: 1, y: 0 },
-    nextDir: { x: 1, y: 0 },
-    score: 0,
-    running: false,
-    gameOver: false,
-    lastStep: 0,
-    speedMs: 120
-  };
-
-  function updateSnakeUI(){
-    const label = (lang === "es") ? "Puntos: " : "Score: ";
-    snakeScore.textContent = label + snakeState.score;
-    const msgSet = SNAKE_MSG[lang] || SNAKE_MSG.es;
-    let key = "ready";
-    if (snakeState.gameOver) key = "over";
-    else if (snakeState.running) key = "running";
-    else if (!snakeState.running && snakeState.lastStep > 0) key = "paused";
-    snakeStatus.textContent = msgSet[key];
-  }
-
-  function spawnFood(){
-    let found = false;
-    while (!found) {
-      const candidate = {
-        x: Math.floor(Math.random() * gridSize),
-        y: Math.floor(Math.random() * gridSize)
-      };
-      found = !snakeState.snake.some(part => part.x === candidate.x && part.y === candidate.y);
-      if (found) snakeState.food = candidate;
+      updateSnakeUI();
     }
-  }
 
-  function resetSnake(){
-    snakeState.snake = [
-      { x: 9, y: 10 },
-      { x: 8, y: 10 },
-      { x: 7, y: 10 }
-    ];
-    snakeState.dir = { x: 1, y: 0 };
-    snakeState.nextDir = { x: 1, y: 0 };
-    snakeState.score = 0;
-    snakeState.running = false;
-    snakeState.gameOver = false;
-    snakeState.lastStep = 0;
-    spawnFood();
-    drawSnake();
-    updateSnakeUI();
-  }
-
-  function drawSnake(){
-    snakeCtx.clearRect(0, 0, snakeCanvas.width, snakeCanvas.height);
-    snakeCtx.fillStyle = "rgba(125,211,252,.25)";
-    snakeCtx.fillRect(0, 0, snakeCanvas.width, snakeCanvas.height);
-
-    snakeCtx.fillStyle = "#22c55e";
-    snakeState.snake.forEach((part, idx) => {
-      snakeCtx.fillStyle = idx === 0 ? "#7dd3fc" : "#22c55e";
-      snakeCtx.fillRect(part.x * cellSize, part.y * cellSize, cellSize - 1, cellSize - 1);
-    });
-
-    snakeCtx.fillStyle = "#f97316";
-    snakeCtx.fillRect(
-      snakeState.food.x * cellSize,
-      snakeState.food.y * cellSize,
-      cellSize - 1,
-      cellSize - 1
-    );
-  }
-
-  function setDirection(x, y){
-    const next = { x, y };
-    if (next.x === -snakeState.dir.x && next.y === -snakeState.dir.y) return;
-    snakeState.nextDir = next;
-  }
-
-  function stepSnake(timestamp){
-    if (!snakeState.running) return;
-    if (timestamp - snakeState.lastStep < snakeState.speedMs) {
-      requestAnimationFrame(stepSnake);
-      return;
+    function escapeHtml(str) {
+      return String(str)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
     }
-    snakeState.lastStep = timestamp;
-    snakeState.dir = snakeState.nextDir;
-    const head = {
-      x: snakeState.snake[0].x + snakeState.dir.x,
-      y: snakeState.snake[0].y + snakeState.dir.y
+
+    function setLang(next) {
+      lang = next;
+      localStorage.setItem("lang", lang);
+      applyI18n();
+    }
+
+    langBtn.addEventListener("click", () => setLang(lang === "es" ? "en" : "es"));
+
+    // ---------- Scroll spy ----------
+    const navLinks = Array.from(document.querySelectorAll("nav a[data-link]"));
+    const sections = navLinks.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const id = e.target.id;
+        navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + id));
+      });
+    }, { threshold: 0.22 });
+
+    sections.forEach(s => observer.observe(s));
+
+    // ---------- Footer year ----------
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // ---------- Snake game ----------
+    const snakeCanvas = document.getElementById("snakeCanvas");
+    const snakeCtx = snakeCanvas.getContext("2d");
+    const snakeScore = document.getElementById("snakeScore");
+    const snakeStatus = document.getElementById("snakeStatus");
+    const snakeStart = document.getElementById("snakeStart");
+    const snakePause = document.getElementById("snakePause");
+    const snakeReset = document.getElementById("snakeReset");
+
+    const gridSize = 20;
+    const cellSize = snakeCanvas.width / gridSize;
+    const snakeState = {
+      snake: [],
+      food: { x: 5, y: 5 },
+      dir: { x: 1, y: 0 },
+      nextDir: { x: 1, y: 0 },
+      score: 0,
+      running: false,
+      gameOver: false,
+      lastStep: 0,
+      speedMs: 120
     };
 
-    const hitWall = head.x < 0 || head.x >= gridSize || head.y < 0 || head.y >= gridSize;
-    const hitSelf = snakeState.snake.some(part => part.x === head.x && part.y === head.y);
-    if (hitWall || hitSelf) {
+    function updateSnakeUI() {
+      const label = (lang === "es") ? "Puntos: " : "Score: ";
+      snakeScore.textContent = label + snakeState.score;
+      const msgSet = SNAKE_MSG[lang] || SNAKE_MSG.es;
+      let key = "ready";
+      if (snakeState.gameOver) key = "over";
+      else if (snakeState.running) key = "running";
+      else if (!snakeState.running && snakeState.lastStep > 0) key = "paused";
+      snakeStatus.textContent = msgSet[key];
+    }
+
+    function spawnFood() {
+      let found = false;
+      while (!found) {
+        const candidate = {
+          x: Math.floor(Math.random() * gridSize),
+          y: Math.floor(Math.random() * gridSize)
+        };
+        found = !snakeState.snake.some(part => part.x === candidate.x && part.y === candidate.y);
+        if (found) snakeState.food = candidate;
+      }
+    }
+
+    function resetSnake() {
+      snakeState.snake = [
+        { x: 9, y: 10 },
+        { x: 8, y: 10 },
+        { x: 7, y: 10 }
+      ];
+      snakeState.dir = { x: 1, y: 0 };
+      snakeState.nextDir = { x: 1, y: 0 };
+      snakeState.score = 0;
       snakeState.running = false;
-      snakeState.gameOver = true;
+      snakeState.gameOver = false;
+      snakeState.lastStep = 0;
+      spawnFood();
+      drawSnake();
+      updateSnakeUI();
+    }
+
+    function drawSnake() {
+      snakeCtx.clearRect(0, 0, snakeCanvas.width, snakeCanvas.height);
+      snakeCtx.fillStyle = "rgba(125,211,252,.25)";
+      snakeCtx.fillRect(0, 0, snakeCanvas.width, snakeCanvas.height);
+
+      snakeCtx.fillStyle = "#22c55e";
+      snakeState.snake.forEach((part, idx) => {
+        snakeCtx.fillStyle = idx === 0 ? "#7dd3fc" : "#22c55e";
+        snakeCtx.fillRect(part.x * cellSize, part.y * cellSize, cellSize - 1, cellSize - 1);
+      });
+
+      snakeCtx.fillStyle = "#f97316";
+      snakeCtx.fillRect(
+        snakeState.food.x * cellSize,
+        snakeState.food.y * cellSize,
+        cellSize - 1,
+        cellSize - 1
+      );
+    }
+
+    function setDirection(x, y) {
+      const next = { x, y };
+      if (next.x === -snakeState.dir.x && next.y === -snakeState.dir.y) return;
+      snakeState.nextDir = next;
+    }
+
+    function stepSnake(timestamp) {
+      if (!snakeState.running) return;
+      if (timestamp - snakeState.lastStep < snakeState.speedMs) {
+        requestAnimationFrame(stepSnake);
+        return;
+      }
+      snakeState.lastStep = timestamp;
+      snakeState.dir = snakeState.nextDir;
+      const head = {
+        x: snakeState.snake[0].x + snakeState.dir.x,
+        y: snakeState.snake[0].y + snakeState.dir.y
+      };
+
+      const hitWall = head.x < 0 || head.x >= gridSize || head.y < 0 || head.y >= gridSize;
+      const hitSelf = snakeState.snake.some(part => part.x === head.x && part.y === head.y);
+      if (hitWall || hitSelf) {
+        snakeState.running = false;
+        snakeState.gameOver = true;
+        updateSnakeUI();
+        drawSnake();
+        return;
+      }
+
+      snakeState.snake.unshift(head);
+      if (head.x === snakeState.food.x && head.y === snakeState.food.y) {
+        snakeState.score += 1;
+        spawnFood();
+      } else {
+        snakeState.snake.pop();
+      }
+
       updateSnakeUI();
       drawSnake();
-      return;
+      requestAnimationFrame(stepSnake);
     }
 
-    snakeState.snake.unshift(head);
-    if (head.x === snakeState.food.x && head.y === snakeState.food.y) {
-      snakeState.score += 1;
-      spawnFood();
-    } else {
-      snakeState.snake.pop();
+    function startSnake() {
+      if (snakeState.gameOver) resetSnake();
+      if (snakeState.running) return;
+      snakeState.running = true;
+      updateSnakeUI();
+      requestAnimationFrame(stepSnake);
     }
 
-    updateSnakeUI();
-    drawSnake();
-    requestAnimationFrame(stepSnake);
-  }
-
-  function startSnake(){
-    if (snakeState.gameOver) resetSnake();
-    if (snakeState.running) return;
-    snakeState.running = true;
-    updateSnakeUI();
-    requestAnimationFrame(stepSnake);
-  }
-
-  function pauseSnake(){
-    if (!snakeState.running) return;
-    snakeState.running = false;
-    updateSnakeUI();
-  }
-
-  snakeStart.addEventListener("click", startSnake);
-  snakePause.addEventListener("click", pauseSnake);
-  snakeReset.addEventListener("click", resetSnake);
-
-  window.addEventListener("keydown", (event) => {
-    switch (event.key) {
-      case "ArrowUp":
-      case "w":
-      case "W":
-        event.preventDefault();
-        setDirection(0, -1);
-        break;
-      case "ArrowDown":
-      case "s":
-      case "S":
-        event.preventDefault();
-        setDirection(0, 1);
-        break;
-      case "ArrowLeft":
-      case "a":
-      case "A":
-        event.preventDefault();
-        setDirection(-1, 0);
-        break;
-      case "ArrowRight":
-      case "d":
-      case "D":
-        event.preventDefault();
-        setDirection(1, 0);
-        break;
-      default:
-        break;
+    function pauseSnake() {
+      if (!snakeState.running) return;
+      snakeState.running = false;
+      updateSnakeUI();
     }
-  });
 
-  resetSnake();
+    snakeStart.addEventListener("click", startSnake);
+    snakePause.addEventListener("click", pauseSnake);
+    snakeReset.addEventListener("click", resetSnake);
 
-  // Init i18n on load
-  applyI18n();
-</script>
+    window.addEventListener("keydown", (event) => {
+      switch (event.key) {
+        case "ArrowUp":
+        case "w":
+        case "W":
+          event.preventDefault();
+          setDirection(0, -1);
+          break;
+        case "ArrowDown":
+        case "s":
+        case "S":
+          event.preventDefault();
+          setDirection(0, 1);
+          break;
+        case "ArrowLeft":
+        case "a":
+        case "A":
+          event.preventDefault();
+          setDirection(-1, 0);
+          break;
+        case "ArrowRight":
+        case "d":
+        case "D":
+          event.preventDefault();
+          setDirection(1, 0);
+          break;
+        default:
+          break;
+      }
+    });
+
+    resetSnake();
+
+    // Init i18n on load
+    applyI18n();
+  </script>
 </body>
+
 </html>
