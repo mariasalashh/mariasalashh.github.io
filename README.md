@@ -68,8 +68,7 @@ Design and implementation of a segmented home automation infrastructure using pf
 
 The website includes:
 
-- Professional profile and biography  
-- Downloadable CV  
+- Professional profile and biography    
 - Education and certifications  
 - Technical portfolio and documented labs  
 - AI and cybersecurity automation projects  
